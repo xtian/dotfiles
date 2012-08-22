@@ -42,7 +42,7 @@
     ui = true
 
 [core]
-    excludesfile = /Users/xtian/.gitignore_global
+    excludesfile = ~/.gitignore_global
     whitespace = space-before-tab,indent-with-non-tab,trailing-space
 
 [push]
