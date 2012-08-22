@@ -1,0 +1,40 @@
+# Create a new directory and enter it
+function mkd() {
+    mkdir -p "$@" && cd "$@"
+}
+
+# Create a data URL from a file
+function dataurl() {
+    local mimeType=$(file --mime-type "$1" | cut -d ' ' -f2)
+    if [[ $mimeType == text/* ]]; then
+        mimeType="${mimeType};charset=utf-8"
+    fi
+    echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')"
+}
+
+# Gzip-enabled `curl`
+function gurl() {
+    curl -sH "Accept-Encoding: gzip" "$@" | gunzip
+}
+
+# Add note to Notes.app (OS X 10.8)
+# Usage: `note 'foo'` or `echo 'foo' | note`
+function note() {
+    local text
+    if [ -t 0 ]; then # argument
+        text="$1"
+    else # pipe
+        text=$(cat)
+    fi
+    body=$(echo "$text" | sed -E 's|$|<br>|g')
+    osascript >/dev/null <<EOF
+tell application "Notes"
+    tell account "iCloud"
+        tell folder "Notes"
+            make new note with properties {name:"$text", body:"$body"}
+        end tell
+    end tell
+end tell
+EOF
+}
+
