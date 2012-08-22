@@ -1,0 +1,108 @@
+#!/bin/bash
+
+# Install Homebrew
+ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+sh ./.brew
+
+# Install 1Password
+wget -O 1Password.zip https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.20.zip
+unzip -q 1Password.zip
+mv 1Password.app /Applications/
+rm 1Password.zip
+
+# Install Alfred
+wget -O Alfred.dmg http://cachefly.alfredapp.com/alfred_1.3_249.dmg
+hdiutil mount Alfred.dmg
+cp -R /Volumes/Alfred.app/Alfred.app /Applications/
+hdiutil unmount /Volumes/Alfred.app
+rm Alfred.dmg
+
+# Install AppCleaner
+wget -O appcleaner.zip http://www.freemacsoft.net/downloads/AppCleaner_2.1.zip
+unzip -q appcleaner.zip
+mv AppCleaner.app /Applications/
+rm appcleaner.zip
+
+# Install Chrome Beta
+wget http://dl.google.com/chrome/mac/beta/GoogleChrome.dmg
+hdiutil mount GoogleChrome.dmg
+cp -R /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/
+hdiutil unmount /Volumes/Google\ Chrome
+rm GoogleChrome.dmg
+
+# Install Dropbox
+wget -O Dropbox.dmg https://www.dropbox.com/download?plat=mac
+hdiutil mount Dropbox.dmg
+cp -R /Volumes/Dropbox\ Installer/Dropbox.app /Applications/
+hdiutil unmount /Volumes/Dropbox\ Installer
+rm Dropbox.dmg
+
+# Install GitX
+wget http://frim.frim.nl/GitXStable.app.zip
+unzip -q GitXStable.app.zip
+mv GitX.app /Applications/
+rm GitXStable.app.zip
+
+# Install ImageAlpha
+wget -O imagealpha.tbz2 http://pngmini.com/ImageAlpha1.2.3.tar.bz2
+tar -xjf imagealpha.tbz2
+mv ImageAlpha.app /Applications/
+rm imagealpha.tar.bz2
+
+# Install ImageOptim
+wget http://imageoptim.com/ImageOptim.tbz2
+tar -xjf ImageOptim.tbz2
+mv ImageOptim.app /Applications/
+rm ImageOptim.tbz2
+
+# Install iTerm2
+wget -O iterm2.zip http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip
+unzip -q iterm2.zip
+mv iTerm.app /Applications/
+rm iterm2.zip
+
+# Install Little Snitch
+wget -O LittleSnitch.dmg http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-2.5.3.dmg
+hduitil mount LittleSnitch.dmg
+open /Volumes/Little\ Snitch\ 2.5.3/Little\ Snitch\ Installer.app
+rm LittleSnitch.dmg
+
+# Install Transmission
+wget https://build.transmissionbt.com/job/trunk-mac/lastStableBuild/artifact/trunk/release/Transmission-.dmg
+hdiutil mount Transmission-.dmg
+cp -R /Volumes/Transmission/Transmission.app /Applications/
+hdiutil unmount /Volumes/Transmission/
+rm Transmission-.dmg
+
+# Install NetNewsWire
+wget http://netnewswireapp.com/downloads/NetNewsWire.zip
+unzip -q NetNewsWire.zip
+mv NetNewsWire.app /Applications/
+rm NetNewsWire.zip
+
+# Install Nocturne
+wget -O Nocturne.zip http://blacktree-nocturne.googlecode.com/files/Nocturne.2.0.0.zip
+unzip -q Nocturne.zip
+mv Nocturne.app /Applications/
+rm Nocturne.zip
+
+# Install Sublime Text 2
+wget -O SublimeText.dmg http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg
+hdiutil mount SublimeText.dmg
+cp -R /Volumes/Sublime\ Text\ 2/Sublime\ Text\ 2.app /Applications/
+hdiutil unmount /Volumes/Sublime\ Text\ 2
+rm SublimeText.dmg
+
+# Install Tunnelblick
+wget -O Tunnelblick.dmg http://tunnelblick.googlecode.com/files/Tunnelblick_3.3beta20.dmg
+hdiutil mount Tunnelblick.dmg
+cp -R /Volumes/Tunnelblick/Tunnelblick.app /Applications/
+hdiutil unmount Tunnelblick.dmg
+rm Tunnelblick.dmg
+
+# Install VLC
+wget -O VLC.dmg http://downloads.sourceforge.net/project/vlc/2.0.3/macosx/vlc-2.0.3.dmg
+hdiutil mount VLC.dmg
+cp -R /Volumes/VLC/VLC.app /Applications/
+hdiutil unmount VLC.dmg
+rm VLC.dmg
