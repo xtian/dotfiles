@@ -4,6 +4,9 @@
 ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 sh ./.brew
 
+# Install ruby
+rbenv install 1.9.3-p125
+
 # Install 1Password
 wget -O 1Password.zip https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.20.zip
 unzip -q 1Password.zip
