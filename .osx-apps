@@ -12,6 +12,11 @@ npm i -g express
 npm i -g jsontool
 npm i -g node-dev
 
+# Install fonts
+curl http://media.nodnod.net/Inconsolata-dz.otf.zip
+unzip -q Inconsolata-dz.otf.zip
+mv Inconsolata-dz.otf ~/Library/Fonts/
+
 # Install 1Password
 wget -O 1Password.zip https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.20.zip
 unzip -q 1Password.zip
