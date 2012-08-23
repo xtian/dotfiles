@@ -81,7 +81,7 @@ rm iterm2.zip
 
 # Install Little Snitch
 wget -O LittleSnitch.dmg http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-2.5.3.dmg
-hduitil mount LittleSnitch.dmg
+hdiutil mount LittleSnitch.dmg
 open /Volumes/Little\ Snitch\ 2.5.3/Little\ Snitch\ Installer.app
 rm LittleSnitch.dmg
 
