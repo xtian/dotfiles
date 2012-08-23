@@ -235,6 +235,9 @@ unset file
 # Dock & hot corners                                                          #
 ###############################################################################
 
+# Put dock on left side of screen
+defaults write com.apple.dock orientation -string "left"
+
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilte-stack -bool true
 
