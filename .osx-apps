@@ -62,10 +62,10 @@ mv GitX.app /Applications/
 rm GitXStable.app.zip
 
 # Install ImageAlpha
-wget -O imagealpha.tbz2 http://pngmini.com/ImageAlpha1.2.3.tar.bz2
-tar -xjf imagealpha.tbz2
+wget -O ImageAlpha.tbz2 http://pngmini.com/ImageAlpha1.2.3.tar.bz2
+tar -xjf ImageAlpha.tbz2
 mv ImageAlpha.app /Applications/
-rm imagealpha.tar.bz2
+rm ImageAlpha.tbz2
 
 # Install ImageOptim
 wget http://imageoptim.com/ImageOptim.tbz2
