@@ -13,7 +13,7 @@ npm i -g jsontool
 npm i -g node-dev
 
 # Install fonts
-curl http://media.nodnod.net/Inconsolata-dz.otf.zip
+wget http://media.nodnod.net/Inconsolata-dz.otf.zip
 unzip -q Inconsolata-dz.otf.zip
 mv Inconsolata-dz.otf ~/Library/Fonts/
 
