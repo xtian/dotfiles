@@ -53,6 +53,10 @@ systemsetup -setrestartfreeze on
 # Show scrollbars when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
+# Disable guest account
+defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -int 0
+defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -int 0
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
