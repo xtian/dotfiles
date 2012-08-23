@@ -26,7 +26,6 @@ brew install hub
 brew install imagemagick
 brew install mongodb
 brew install nginx
-brew install node
 brew install postgresql
 brew install qt
 brew install rbenv
