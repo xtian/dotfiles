@@ -26,6 +26,7 @@
     r = rebase
     ri = rebase -i
     rix = rebase -i HEAD~10
+    rr = reset --hard head
     s = status -s
 
 [apply]
