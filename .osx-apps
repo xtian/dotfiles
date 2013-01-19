@@ -19,7 +19,7 @@ mv 1Password.app /Applications/
 rm 1Password.zip
 
 # Install Alfred
-wget -O Alfred.dmg http://cachefly.alfredapp.com/alfred_1.3_249.dmg
+wget -O Alfred.dmg http://cachefly.alfredapp.com/alfred_1.3.2_265.zip
 hdiutil mount Alfred.dmg
 cp -R /Volumes/Alfred.app/Alfred.app /Applications/
 hdiutil unmount /Volumes/Alfred.app
