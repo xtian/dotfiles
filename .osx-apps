@@ -7,16 +7,6 @@ sh ./.brew
 # Install ruby
 rbenv install 1.9.3-p194
 
-# Install node
-wget -O node.pkg http://nodejs.org/dist/latest/node-v0.8.8.pkg
-sudo installer -package node.pkg -target "/Volumes/Macintosh\ HD"
-rm node.pkg
-
-# Install npm packages
-npm i -g express
-npm i -g jsontool
-npm i -g node-dev
-
 # Install fonts
 wget http://media.nodnod.net/Inconsolata-dz.otf.zip
 unzip -q Inconsolata-dz.otf.zip
