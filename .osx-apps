@@ -109,7 +109,7 @@ hdiutil unmount Tunnelblick.dmg
 rm Tunnelblick.dmg
 
 # Install VLC
-wget -O VLC.dmg http://downloads.sourceforge.net/project/vlc/2.0.3/macosx/vlc-2.0.3.dmg
+wget -O VLC.dmg http://downloads.sourceforge.net/project/vlc/2.0.5/macosx/vlc-2.0.5.dmg
 hdiutil mount VLC.dmg
 cp -R /Volumes/VLC/VLC.app /Applications/
 hdiutil unmount VLC.dmg
