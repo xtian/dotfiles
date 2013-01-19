@@ -28,7 +28,6 @@ brew install imagemagick
 brew install mongodb
 brew install nginx
 brew install postgresql
-brew install qt
 brew install rbenv
 brew install redis
 brew install ruby-build
