@@ -27,7 +27,6 @@ brew install chruby
 brew install git
 brew install git-extras
 brew install hub
-brew install imagemagick
 brew install mongodb
 brew install nginx
 brew install postgresql
