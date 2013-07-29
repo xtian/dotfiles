@@ -35,5 +35,34 @@ brew install redis
 brew install ruby-install
 brew install tree
 
+# Install native apps
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+brew cask install alfred
+brew cask install app-cleaner
+brew cask install colloquy
+brew cask install dropbox
+brew cask install firefox-aurora
+brew cask install gitx
+brew cask install google-chrome
+brew cask install google-hangouts
+brew cask install hip-chat
+brew cask install imagealpha
+brew cask install imageoptim
+brew cask install iterm2
+brew cask install little-snitch
+brew cask install minecraft
+brew cask install net-news-wire
+brew cask install nocturne
+brew cask install one-password
+brew cask install opera-next
+brew cask install steam
+brew cask install sublime-text
+brew cask install tor-browser
+brew cask install transmission
+brew cask install tunnelblick
+brew cask install vlc
+
 # Remove outdated versions from the cellar
 brew cleanup
