@@ -5,7 +5,9 @@ ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 sh ./.brew
 
 # Install ruby
-rbenv install 1.9.3-p194
+ruby-install ruby 2.0.0-p195
+gem install powder
+gem install rails
 
 # Install fonts
 wget http://media.nodnod.net/Inconsolata-dz.otf.zip

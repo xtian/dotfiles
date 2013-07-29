@@ -33,5 +33,9 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-eval "$(rbenv init -)"
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+chruby ruby-2
+
 eval "$(hub alias -s)"

@@ -21,6 +21,7 @@ brew install homebrew/dupes/grep
 
 # Install everything else
 brew install bash-completion
+brew install chruby
 brew install git
 brew install git-extras
 brew install hub
@@ -28,9 +29,8 @@ brew install imagemagick
 brew install mongodb
 brew install nginx
 brew install postgresql
-brew install rbenv
 brew install redis
-brew install ruby-build
+brew install ruby-install
 brew install tree
 brew install webkit2png
 
