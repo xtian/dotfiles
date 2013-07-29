@@ -34,7 +34,6 @@ brew install postgresql
 brew install redis
 brew install ruby-install
 brew install tree
-brew install webkit2png
 
 # Remove outdated versions from the cellar
 brew cleanup
