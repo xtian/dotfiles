@@ -29,6 +29,7 @@ brew install git-extras
 brew install hub
 brew install mongodb
 brew install nginx
+brew install node
 brew install postgresql
 brew install redis
 brew install ruby-install
