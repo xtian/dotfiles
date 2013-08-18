@@ -1,5 +1,5 @@
 # Use color output for `ls`
-alias ls="command ls -G"
+alias ls="command ls -G --color"
 
 # List all files
 alias la="ls -aG"
