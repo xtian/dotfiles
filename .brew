@@ -27,6 +27,7 @@ brew install chruby
 brew install git
 brew install git-extras
 brew install hub
+brew install lynx
 brew install markdown
 brew install mongodb
 brew install moreutils
