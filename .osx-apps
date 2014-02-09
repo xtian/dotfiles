@@ -5,8 +5,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 sh ./.brew
 
 # Install ruby
-ruby-install ruby 2.0.0-p195
-gem install powder
+ruby-install ruby 2.1.0
 gem install rails
 
 # Install fonts
