@@ -36,6 +36,6 @@ alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias workin="git add .; git commit -am workin"
 
 alias l="echo | vipe | xargs -0 printf $'# %s\n%s\n' \"$(date)\" $1 >> .xtian.md"
-alias rl="touch .xtian.md; markdown .xtian.md | lynx -stdin"
+alias rl="touch .xtian.md; markdown .xtian.md | lynx -stdin -vikeys"
 
 alias localip="ipconfig getifaddr en0"
