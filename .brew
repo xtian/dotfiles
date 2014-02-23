@@ -56,7 +56,6 @@ brew cask install iterm2
 brew cask install little-snitch
 brew cask install minecraft
 brew cask install net-news-wire
-brew cask install nocturne
 brew cask install one-password
 brew cask install steam
 brew cask install sublime-text
