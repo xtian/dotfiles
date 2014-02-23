@@ -12,6 +12,12 @@ shopt -s nocaseglob
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
+# Re-edit a failed history substitution
+shopt -s histreedit
+
+# Expands history substitutions for verification
+shopt -s histverify
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
