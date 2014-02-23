@@ -58,7 +58,6 @@ brew cask install minecraft
 brew cask install net-news-wire
 brew cask install nocturne
 brew cask install one-password
-brew cask install opera-next
 brew cask install steam
 brew cask install sublime-text
 brew cask install tor-browser
