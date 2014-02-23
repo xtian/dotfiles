@@ -1,0 +1,39 @@
+[
+  { "keys": ["ctrl+c"], "command": "enter_insert_mode"},
+  { "keys": ["ctrl+space"], "command": "exit_insert_mode",
+      "context":
+      [
+          { "key": "setting.command_mode", "operand": false },
+          { "key": "setting.is_widget", "operand": false },
+          { "key": "setting.vintage_ctrl_keys" }
+      ]
+  },
+
+  { "keys": ["ctrl+space"], "command": "exit_visual_mode",
+      "context":
+      [
+          { "key": "setting.command_mode"},
+          { "key": "num_selections", "operand": 1},
+          { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
+          { "key": "setting.vintage_ctrl_keys" }
+      ]
+  },
+
+  { "keys": ["ctrl+space"], "command": "vi_cancel_current_action",
+      "context":
+      [
+          { "key": "setting.command_mode" },
+          { "key": "vi_has_input_state" },
+          { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+          { "key": "setting.vintage_ctrl_keys" }
+      ]
+  },
+  { "keys": [" "], "command": "show_overlay",
+    "context":
+    [
+      { "key": "setting.command_mode", "operand": true },
+      { "key": "setting.is_widget", "operand": false }
+    ],
+    "args": {"overlay": "goto", "text": ":"}
+  }
+]

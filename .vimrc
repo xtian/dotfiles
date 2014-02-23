@@ -19,11 +19,14 @@ set incsearch
 set ignorecase
 set smartcase
 set mouse=nv
+set wildmenu
+set wildmode=longest,list,full
 
 set number
 
 noremap <Space> :
-imap <c-c> <esc>
+inoremap <c-Space> <esc>
+inoremap <c-@> <esc>
 
 set t_Co=256
 colors molokai
