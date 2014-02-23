@@ -63,7 +63,6 @@ brew cask install steam
 brew cask install sublime-text
 brew cask install tor-browser
 brew cask install transmission
-brew cask install tunnelblick
 brew cask install vlc
 
 # Remove outdated versions from the cellar
