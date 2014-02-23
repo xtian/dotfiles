@@ -50,7 +50,6 @@ brew cask install firefox-aurora
 brew cask install gitx
 brew cask install google-chrome
 brew cask install google-hangouts
-brew cask install hip-chat
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2
