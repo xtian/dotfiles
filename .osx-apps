@@ -6,10 +6,10 @@ sh ./.brew
 
 # Install ruby
 ruby-install ruby 2.1.0
+gem install bundler
 gem install rails
 
 # Install fonts
 wget http://media.nodnod.net/Inconsolata-dz.otf.zip
 unzip -q Inconsolata-dz.otf.zip
 mv Inconsolata-dz.otf ~/Library/Fonts/
-
