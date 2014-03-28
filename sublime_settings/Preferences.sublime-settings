@@ -4,6 +4,7 @@
   "draw_indent_guides": false,
   "ensure_newline_at_eof_on_save": true,
   "fold_buttons": false,
+  "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules"],
   "font_face": "Inconsolata-dz",
   "font_options":
   [
