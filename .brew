@@ -44,22 +44,26 @@ brew install brew-cask
 
 brew cask install alfred
 brew cask install app-cleaner
-brew cask install colloquy
 brew cask install dropbox
 brew cask install firefox-aurora
+brew cask install f-lux
 brew cask install gitx
 brew cask install google-chrome
 brew cask install google-hangouts
+brew cask install gpgtools
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install little-snitch
+brew cask install macvim
+brew cask install mumble
 brew cask install net-news-wire
-brew cask install one-password
+brew cask install onepassword
 brew cask install steam
 brew cask install sublime-text
-brew cask install tor-browser
+brew cask install torbrowserbundle
 brew cask install transmission
+brew cask install virtualbox
 brew cask install vlc
 
 # Remove outdated versions from the cellar
