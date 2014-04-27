@@ -14,7 +14,7 @@ alias ll="ls -lG"
 alias lag="ls -laG"
 
 # Update OS X, Homebrew, and NPM
-alias up="sudo softwareupdate -i -a; brew update; brew upgrade; npm update npm -g; npm update -g"
+alias up="brew update; brew upgrade"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
