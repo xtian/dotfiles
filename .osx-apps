@@ -1,15 +1,11 @@
 #!/bin/bash
 
 # Install Homebrew
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 sh ./.brew
 
 # Install ruby
-ruby-install ruby 2.1.1
+ruby-install ruby stable
 gem install bundler
 gem install rails
 
-# Install fonts
-wget http://media.nodnod.net/Inconsolata-dz.otf.zip
-unzip -q Inconsolata-dz.otf.zip
-mv Inconsolata-dz.otf ~/Library/Fonts/
