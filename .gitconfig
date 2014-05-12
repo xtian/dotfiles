@@ -44,6 +44,7 @@
     ui = true
 
 [core]
+    editor = vim -f
     excludesfile = ~/.gitignore_global
     whitespace = space-before-tab,trailing-space
 
