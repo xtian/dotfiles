@@ -22,7 +22,10 @@ brew install wget --enable-iri
 
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
-brew install homebrew/dupes/grep
+brew install grep
+brew install less
+brew install openssh
+brew install whois
 
 # Install everything else
 brew install bash-completion
@@ -30,9 +33,8 @@ brew install chruby
 brew install git
 brew install git-extras
 brew install hub
-brew install node
+brew install iojs
 brew install postgresql
-brew install redis
 brew install ruby-install
 brew install the_silver_searcher
 brew install tree
@@ -43,30 +45,26 @@ brew tap caskroom/fonts
 brew tap caskroom/versions
 brew install brew-cask
 
-brew cask install alfred
 brew cask install appcleaner
 brew cask install cloudup
 brew cask install dropbox
-brew cask install firefox-aurora
+brew cask install firefoxdeveloperedition
 brew cask install flux
 brew cask install gitx
-brew cask install google-chrome-canary
-brew cask install google-hangouts
+brew cask install google-chrome-beta
 brew cask install gpgtools
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install little-snitch
-brew cask install macvim
 brew cask install mumble
-brew cask install onepassword
-brew cask install steam
+brew cask install 1password
 brew cask install torbrowser
 brew cask install transmission
 brew cask install virtualbox
 brew cask install vlc
 
-brew cask install font-inconsolata-dz-for-powerline
+brew cask install font-dejavu-sans-mono-for-powerline
 
 # Remove outdated versions from the cellar
 brew cleanup
