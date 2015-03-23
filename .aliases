@@ -20,3 +20,15 @@ alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias workin="git add .; git commit -am workin"
 
 alias localip="ipconfig getifaddr en0"
+
+
+# Intuitive map function
+# For example, to list all directories that contain a certain file:
+# find . -name .gitattributes | map dirname
+alias map="xargs -n1"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
