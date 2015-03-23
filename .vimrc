@@ -17,12 +17,6 @@ autocmd FileType markdown setlocal spell textwidth=80
 
 autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
-" Opens buffer at previous line position
-autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \     exe "normal g`\"" |
-    \ endif
-
 syntax enable
 
 filetype plugin indent on
@@ -59,7 +53,6 @@ set tabstop=2
 
 " Keep lines around cursor
 set scrolljump=5
-"set scrolloff=3
 
 " Highlight problematic whitespace
 set list
@@ -72,11 +65,6 @@ set wildmode=longest,list,full
 " Hide search highlighting
 noremap / :set hlsearch<CR>/
 nmap <silent> <Leader><Leader> :set invhlsearch<CR>
-
-" Backups and swap
-set backup
-set backupdir=$HOME/.vim/backup,/tmp
-set directory=$HOME/.vim/swap,/tmp
 
 " Navigate wrapped lines visually
 noremap j gj
@@ -103,28 +91,6 @@ inoremap jj <Esc>
 inoremap <C-c> <Esc>
 
 cabbrev ag Ag
-
-" Use system clipboard for * register
-if has("clipboard")
-    set clipboard=unnamed
-endif
-
-if has("persistent_undo")
-    set undofile
-    set undolevels=1000
-    set undoreload=10000
-endif
-
-if has("gui_running")
-    set background=light
-    set guifont=Inconsolata-dz\ for\ Powerline:h15
-    set guioptions-=r
-
-    set columns=100
-    set lines=50
-
-    cabbrev x w,bd
-endif
 
 " Highlight 81st column
 call matchadd("ColorColumn", "\%81v", 100)
