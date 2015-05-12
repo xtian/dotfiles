@@ -22,6 +22,7 @@ syntax enable
 filetype plugin indent on
 
 set backspace=indent,eol,start
+set cryptmethod=blowfish2
 set cursorline
 set encoding=utf-8
 set history=1000
