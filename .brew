@@ -54,8 +54,6 @@ brew cask install flux
 brew cask install gitx
 brew cask install google-chrome-beta
 brew cask install gpgtools
-brew cask install imagealpha
-brew cask install imageoptim
 brew cask install iterm2
 brew cask install little-snitch
 brew cask install mumble
