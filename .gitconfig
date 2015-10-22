@@ -12,6 +12,7 @@
     amm = commit --amend
     ap  = add --all --patch
     b   = branch
+    bl  = blame -w --date=short
     c   = commit
     ca  = commit --amend -C HEAD
     cam = commit --all --message
