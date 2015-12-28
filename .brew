@@ -41,10 +41,8 @@ brew install the_silver_searcher
 brew install tree
 
 # Install native apps
-brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
-brew install brew-cask
 
 brew cask install appcleaner
 brew cask install cloudup
