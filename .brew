@@ -35,8 +35,8 @@ brew install git-extras
 brew install hub
 brew install iojs
 brew install postgresql
+brew install pt
 brew install ruby-install
-brew install the_silver_searcher
 brew install tree
 
 # Install native apps
