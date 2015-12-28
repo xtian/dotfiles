@@ -44,7 +44,6 @@ brew tap caskroom/fonts
 brew tap caskroom/versions
 
 brew cask install appcleaner
-brew cask install cloudup
 brew cask install dropbox
 brew cask install firefoxdeveloperedition
 brew cask install flux
