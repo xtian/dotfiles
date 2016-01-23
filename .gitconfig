@@ -51,6 +51,7 @@
     editor = vim -f
     excludesfile = ~/.gitignore_global
     whitespace = space-before-tab,trailing-space
+    autocrlf = input
 
 [push]
     default = tracking
