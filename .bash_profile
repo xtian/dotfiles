@@ -28,6 +28,9 @@ for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null
 done
 
+# Cycle through possible completions
+[[ $- = *i* ]] && bind TAB:menu-complete
+
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
