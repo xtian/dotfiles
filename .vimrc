@@ -88,10 +88,10 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 
-inoremap jj <Esc>
+inoremap fd <Esc>
 inoremap <C-c> <Esc>
 
-cabbrev ag Ag
+cabbrev pt Pt
 
 " Highlight 81st column
 call matchadd("ColorColumn", "\%81v", 100)

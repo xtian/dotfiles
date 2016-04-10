@@ -10,7 +10,7 @@ Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
 Plugin 'godlygeek/tabular'
 Plugin 'jazzcore/ctrlp-cmatcher'
 Plugin 'kien/ctrlp.vim'
-Bundle 'rking/ag.vim'
+Plugin 'nazo/pt.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'spf13/vim-autoclose'
