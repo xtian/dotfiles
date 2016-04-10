@@ -55,12 +55,12 @@ brew cask install appcleaner
 brew cask install dropbox
 brew cask install firefoxdeveloperedition
 brew cask install flux
-brew cask install gitx
 brew cask install google-chrome-beta
 brew cask install gpgtools
 brew cask install iterm2-beta
 brew cask install little-snitch
 brew cask install mumble
+brew cask install rowanj-gitx
 brew cask install slack
 brew cask install sublime-text3
 brew cask install torbrowser
