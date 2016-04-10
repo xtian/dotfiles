@@ -50,6 +50,7 @@ brew install ruby-completion
 
 # Install native apps
 brew tap caskroom/versions
+brew cask install 1password
 brew cask install appcleaner
 brew cask install dropbox
 brew cask install firefoxdeveloperedition
@@ -60,7 +61,6 @@ brew cask install gpgtools
 brew cask install iterm2
 brew cask install little-snitch
 brew cask install mumble
-brew cask install 1password
 brew cask install slack
 brew cask install torbrowser
 brew cask install transmission
