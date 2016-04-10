@@ -28,7 +28,6 @@ brew install vim --override-system-vi
 brew install whois
 
 # Install command line utilities
-brew install bash-completion
 brew install chruby
 brew install git
 brew install git-extras
@@ -38,6 +37,14 @@ brew install postgresql
 brew install pt
 brew install ruby-install
 brew install tree
+
+# Install bash completions
+brew tap homebrew/completions
+brew install bash-completion
+brew install bundler-completion
+brew install cargo-completion
+brew install mix-completion
+brew install ruby-completion
 
 # Install native apps
 brew tap caskroom/versions
