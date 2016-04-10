@@ -27,7 +27,7 @@ brew install less
 brew install vim --override-system-vi
 brew install whois
 
-# Install everything else
+# Install command line utilities
 brew install bash-completion
 brew install chruby
 brew install git
