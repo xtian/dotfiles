@@ -1,6 +1,5 @@
 [
-  { "keys": ["ctrl+c"], "command": "enter_insert_mode"},
-  { "keys": ["ctrl+space"], "command": "exit_insert_mode",
+  { "keys": ["f", "d"], "command": "exit_insert_mode",
       "context":
       [
           { "key": "setting.command_mode", "operand": false },
@@ -9,7 +8,7 @@
       ]
   },
 
-  { "keys": ["ctrl+space"], "command": "exit_visual_mode",
+  { "keys": ["f", "d"], "command": "exit_visual_mode",
       "context":
       [
           { "key": "setting.command_mode"},
@@ -19,15 +18,8 @@
       ]
   },
 
-  { "keys": ["ctrl+space"], "command": "vi_cancel_current_action",
-      "context":
-      [
-          { "key": "setting.command_mode" },
-          { "key": "vi_has_input_state" },
-          { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
-          { "key": "setting.vintage_ctrl_keys" }
-      ]
-  },
+  { "keys": ["super+shift+;"], "command": "run_macro_file", "args": {"file": "Packages/User/AddSemicolon.sublime-macro"}},
+
   { "keys": [" "], "command": "show_overlay",
     "context":
     [
@@ -35,5 +27,12 @@
       { "key": "setting.is_widget", "operand": false }
     ],
     "args": {"overlay": "goto", "text": ":"}
-  }
+  },
+
+  { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["super+shift+v"], "command": "paste" },
+  { "keys": ["super+shift+r"], "command": "reveal_in_side_bar" },
+
+  { "keys": [" ", "n"], "command": "quick_create_file", "context": [{"key": "setting.command_mode"}] },
+  { "keys": [" ", "d"], "command": "quick_create_directory", "context": [{"key": "setting.command_mode"}] }
 ]
