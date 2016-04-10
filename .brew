@@ -40,9 +40,7 @@ brew install ruby-install
 brew install tree
 
 # Install native apps
-brew tap caskroom/fonts
 brew tap caskroom/versions
-
 brew cask install appcleaner
 brew cask install dropbox
 brew cask install firefoxdeveloperedition
@@ -59,6 +57,8 @@ brew cask install torbrowser
 brew cask install transmission
 brew cask install vlc
 
+# Install fonts
+brew tap caskroom/fonts
 brew cask install font-hack
 
 # Remove outdated versions from the cellar
