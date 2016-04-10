@@ -29,6 +29,7 @@ brew install whois
 
 # Install command line utilities
 brew install chruby
+brew install elixir
 brew install git
 brew install git-extras
 brew install hub
