@@ -62,6 +62,7 @@ brew cask install iterm2-beta
 brew cask install little-snitch
 brew cask install mumble
 brew cask install slack
+brew cask install sublime-text3
 brew cask install torbrowser
 brew cask install transmission
 brew cask install vlc
