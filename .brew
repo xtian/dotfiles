@@ -58,7 +58,7 @@ brew cask install flux
 brew cask install gitx
 brew cask install google-chrome-beta
 brew cask install gpgtools
-brew cask install iterm2
+brew cask install iterm2-beta
 brew cask install little-snitch
 brew cask install mumble
 brew cask install slack
