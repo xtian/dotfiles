@@ -1,3 +1,5 @@
+alias fupm="git co master && git p && git co - && git r master && git push -f"
+
 alias ..="cd .."
 alias -- -="cd -"
 
