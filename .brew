@@ -43,7 +43,6 @@ brew install tree
 # Install bash completions
 brew tap homebrew/completions
 brew install bash-completion
-brew install bundler-completion
 brew install cargo-completion
 brew install mix-completion
 brew install ruby-completion
