@@ -1,6 +1,5 @@
 PATH="/usr/local/heroku/bin:$PATH"
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="$(brew --prefix node)/bin:$PATH"
 PATH="~/.cargo/bin:$PATH"
