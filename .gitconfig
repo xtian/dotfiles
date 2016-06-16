@@ -59,6 +59,9 @@
 	whitespace = space-before-tab,trailing-space
 	autocrlf = input
 
+[diff]
+	compactionHeuristic = true
+
 [push]
 	default = tracking
 
