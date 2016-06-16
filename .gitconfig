@@ -1,6 +1,7 @@
 [user]
 	name = Christian Wesselhoeft
 	email = hi@xtian.us
+	signingkey = 7CE5E608
 
 [github]
 	user = xtian
@@ -48,6 +49,9 @@
 
 [color]
 	ui = true
+
+[commit]
+	gpgsign = true
 
 [core]
 	editor = vim -f
