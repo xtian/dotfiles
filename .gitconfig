@@ -74,3 +74,5 @@
 [remote "origin"]
 	push = HEAD
 
+[submodule]
+	fetchJobs = 4
