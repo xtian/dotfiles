@@ -19,6 +19,7 @@ brew 'whois'
 
 # Install command line utilities
 brew 'chruby'
+brew 'diff-so-fancy'
 brew 'elixir'
 brew 'git'
 brew 'git-extras'

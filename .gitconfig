@@ -50,6 +50,16 @@
 [color]
 	ui = true
 
+[color "diff"]
+	meta = yellow bold
+	whitespace = red reverse
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
 [commit]
 	gpgsign = true
 
@@ -58,18 +68,22 @@
 	excludesfile = ~/.gitignore_global
 	whitespace = space-before-tab,trailing-space
 	autocrlf = input
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [diff]
 	compactionHeuristic = true
-
-[push]
-	default = tracking
 
 [hub]
 	protocol = git
 
 [help]
 	autocorrect = 1
+
+[interactive]
+	diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
+
+[push]
+	default = tracking
 
 [remote "origin"]
 	push = HEAD
