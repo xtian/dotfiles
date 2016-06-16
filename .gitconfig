@@ -1,68 +1,69 @@
 [user]
-    name = Christian Wesselhoeft
-    email = hi@xtian.us
+	name = Christian Wesselhoeft
+	email = hi@xtian.us
 
 [github]
-    user = xtian
+	user = xtian
 
 [alias]
-    a   = add
-    aa  = add --all
-    aam = commit --amend --all
-    amm = commit --amend
-    ap  = add --all --patch
-    b   = branch
-    bl  = blame -w --date=short
-    c   = commit
-    ca  = commit --amend -C HEAD
-    cam = commit --all --message
-    cm  = commit --message
-    co  = checkout
-    cp  = cherry-pick
-    d   = diff --patch-with-stat
-    dc  = diff --cached --patch-with-stat
-    dw  = diff --word-diff --patch-with-stat
-    l   = log --pretty='format:%Cgreen%h%Creset %an - %s' --graph
-    lc  = local-commits
-    p   = pull --rebase
-    pop = reset head^
-    r   = rebase
-    ra  = rebase --abort
-    rc  = rebase --continue
-    ri  = rebase --interactive
-    rix = rebase --interactive HEAD~10
-    rr  = reset --hard HEAD
-    s   = status --short --branch
+	a   = add
+	aa  = add --all
+	aam = commit --amend --all
+	amm = commit --amend
+	ap  = add --all --patch
+	b   = branch
+	bl  = blame -w --date=short
+	c   = commit
+	ca  = commit --amend -C HEAD
+	cam = commit --all --message
+	cm  = commit --message
+	co  = checkout
+	cp  = cherry-pick
+	d   = diff --patch-with-stat
+	dc  = diff --cached --patch-with-stat
+	dw  = diff --word-diff --patch-with-stat
+	l   = log --pretty='format:%Cgreen%h%Creset %an - %s' --graph
+	lc  = local-commits
+	merge = merge -S
+	p   = pull --rebase
+	pop = reset head^
+	r   = rebase
+	ra  = rebase --abort
+	rc  = rebase --continue
+	ri  = rebase --interactive
+	rix = rebase --interactive HEAD~10
+	rr  = reset --hard HEAD
+	s   = status --short --branch
 
 [apply]
-    whitespace = fix
+	whitespace = fix
 
 [branch]
-    autosetuprebase = always
+	autosetuprebase = always
 
 [branch "master"]
-    merge = refs/heads/master
-    rebase = true
-    remote = origin
+	merge = refs/heads/master
+	rebase = true
+	remote = origin
 
 [color]
-    ui = true
+	ui = true
 
 [core]
-    editor = vim -f
-    excludesfile = ~/.gitignore_global
-    whitespace = space-before-tab,trailing-space
-    autocrlf = input
+	editor = vim -f
+	excludesfile = ~/.gitignore_global
+	whitespace = space-before-tab,trailing-space
+	autocrlf = input
 
 [push]
-    default = tracking
+	default = tracking
 
 [hub]
-    protocol = git
+	protocol = git
 
 [help]
-    autocorrect = 1
+	autocorrect = 1
 
 [remote "origin"]
-    push = HEAD
+	push = HEAD
 
