@@ -20,14 +20,18 @@
     "bower_components",
     "dist",
     "test-dist",
-    "_build"
+    "_build",
+    ".yardoc",
+    "priv/static",
+    "deps",
+    "doc"
   ],
   "font_face": "Hack",
   "font_options":
   [
     "subpixel_antialias"
   ],
-  "font_size": 15,
+  "font_size": 17,
   "highlight_line": true,
   "highlight_modified_tabs": true,
   "hot_exit": false,
