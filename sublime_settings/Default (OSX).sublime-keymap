@@ -34,5 +34,20 @@
   { "keys": ["super+shift+r"], "command": "reveal_in_side_bar" },
 
   { "keys": [" ", "n"], "command": "quick_create_file", "context": [{"key": "setting.command_mode"}] },
-  { "keys": [" ", "d"], "command": "quick_create_directory", "context": [{"key": "setting.command_mode"}] }
+  { "keys": [" ", "d"], "command": "quick_create_directory", "context": [{"key": "setting.command_mode"}] },
+
+  { "keys": ["ctrl+c"], "command": "clear_fields", "context":
+    [
+      { "key": "has_next_field", "operator": "equal", "operand": true }
+    ]
+  },
+
+  { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${0:$SELECTION}}"}, "context":
+    [
+      { "key": "indented_block", "match_all": true },
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true },
+    ]
+  },
 ]
