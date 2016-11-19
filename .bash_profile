@@ -45,3 +45,4 @@ source /usr/local/share/chruby/auto.sh
 chruby ruby-2
 
 eval "$(hub alias -s)"
+ssh-add -A 2> /dev/null
