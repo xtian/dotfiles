@@ -79,9 +79,6 @@
 [help]
 	autocorrect = 1
 
-[interactive]
-	diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
-
 [push]
 	default = tracking
 
