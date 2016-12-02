@@ -10,3 +10,5 @@ brew bundle
 ruby-install ruby stable
 gem install bundler
 gem install rails
+
+./copy-dotfiles.sh
