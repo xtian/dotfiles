@@ -1,0 +1,56 @@
+" Automatically install vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+call plug#begin()
+
+Plug 'bling/vim-airline'
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dyng/ctrlsf.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'JazzCore/ctrlp-cmatcher'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'noahfrederick/vim-hemisu'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-vinegar'
+Plug 'vim-ruby/vim-ruby'
+call plug#end()
+
+" Color scheme
+set background=dark
+colorscheme Tomorrow-Night-Bright
+
+hi link rubyStringDelimiter String "
+
+if has("autocmd")
+  autocmd FileType * if &ft!="gitcommit"|call UseLightTheme()|endif
+endif
+
+if has('statusline')
+  set laststatus=2
+
+  let g:airline_left_sep=''
+  let g:airline_right_sep=''
+
+  let g:airline#extensions#tabline#left_sep=''
+  let g:airline#extensions#tabline#left_alt_sep=''
+
+  let g:airline#extensions#tabline#enabled=1
+endif
+
+function! UseLightTheme()
+  set background=light
+  colorscheme PaperColor
+
+  if has('statusline')
+    let g:airline_theme='PaperColor'
+  end
+endfunction
