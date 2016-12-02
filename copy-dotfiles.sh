@@ -9,8 +9,9 @@ function doIt() {
     --exclude ".DS_Store" \
     --exclude "Brewfile" \
     --exclude "copy-dotfiles.sh" \
-    --exclude "setup.sh" \
     --exclude "README.md" \
+    --exclude "setup.sh" \
+    --exclude "sublime_settings" \
     -avh --no-perms . ~;
   source ~/.bash_profile;
 }
