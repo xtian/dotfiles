@@ -30,3 +30,9 @@ function targz() {
   [ -f "${tmpFile}" ] && rm "${tmpFile}";
   echo "${tmpFile}.gz created successfully.";
 }
+
+# Create macOS notification after given number of minutes
+function timer() {
+  let seconds=$@*60;
+  sleep $seconds && osascript -e "display notification \"$(date '+%I:%M %p')\" sound name \"Purr.aiff\" with title \"Timer Ended\"" &
+}
