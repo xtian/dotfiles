@@ -66,4 +66,3 @@ mas 'The Unarchiver', id: 425424353
 # Install fonts
 tap 'caskroom/fonts'
 cask 'font-hack'
-
