@@ -50,7 +50,7 @@ endif
 function! SetTheme()
   if &filetype != "gitcommit" && &filetype != "gitrebase"
     set background=light
-    colorscheme PaperColor
+    colorscheme Cubicle
 
     if has('statusline')
       let g:airline_theme='PaperColor'
