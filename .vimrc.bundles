@@ -31,7 +31,8 @@ colorscheme Tomorrow-Night-Bright
 hi link rubyStringDelimiter String "
 
 if has("autocmd")
-  autocmd FileType * if &ft!="gitcommit"|call UseLightTheme()|endif
+  autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
+  autocmd FileType * call SetTheme()
 endif
 
 if has('statusline')
@@ -46,11 +47,13 @@ if has('statusline')
   let g:airline#extensions#tabline#enabled=1
 endif
 
-function! UseLightTheme()
-  set background=light
-  colorscheme PaperColor
+function! SetTheme()
+  if &filetype != "gitcommit" && &filetype != "gitrebase"
+    set background=light
+    colorscheme PaperColor
 
-  if has('statusline')
-    let g:airline_theme='PaperColor'
-  end
+    if has('statusline')
+      let g:airline_theme='PaperColor'
+    end
+  endif
 endfunction
