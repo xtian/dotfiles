@@ -28,8 +28,6 @@ call plug#end()
 set background=dark
 colorscheme Tomorrow-Night-Bright
 
-hi link rubyStringDelimiter String "
-
 if has("autocmd")
   autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
   autocmd FileType * call SetTheme()

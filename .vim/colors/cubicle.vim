@@ -70,6 +70,9 @@ hi cssValueLength ctermfg=124 ctermbg=NONE cterm=NONE guifg=#a31515 guibg=NONE g
 hi cssCommonAttr ctermfg=124 ctermbg=NONE cterm=NONE guifg=#a31515 guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
+" Elixir
+hi link elixirStringDelimiter String "
+
 " HTML
 hi htmlTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi htmlEndTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
@@ -83,6 +86,8 @@ hi javaScriptRailsFunction ctermfg=0 ctermbg=NONE cterm=NONE guifg=#000000 guibg
 hi javaScriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 " Ruby
+hi link rubyStringDelimiter String "
+
 hi rubyClass ctermfg=21 ctermbg=NONE cterm=NONE guifg=#0000ff guibg=NONE gui=NONE
 hi rubyFunction ctermfg=0 ctermbg=NONE cterm=NONE guifg=#000000 guibg=NONE gui=NONE
 hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
