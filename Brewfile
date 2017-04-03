@@ -32,6 +32,7 @@ brew 'rust'
 brew 'tmux'
 brew 'tree'
 brew 'wget', args: ['with-iri']
+brew 'yarn'
 
 # Install bash completions
 tap 'homebrew/completions'
