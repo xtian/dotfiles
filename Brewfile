@@ -38,7 +38,6 @@ brew 'yarn'
 tap 'homebrew/completions'
 brew 'bash-completion'
 brew 'cargo-completion'
-brew 'mix-completion'
 brew 'ruby-completion'
 
 # Install native apps
