@@ -3,6 +3,9 @@
 # Make vim the default editor.
 export EDITOR='vim';
 
+# Enable history for iex
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
 
