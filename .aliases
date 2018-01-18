@@ -13,7 +13,7 @@ alias lag="ls -laG"
 alias ls="command ls -G"
 
 # Update Homebrew
-alias up="brew update; brew upgrade; brew cleanup; brew cask cleanup; mas upgrade"
+alias up="brew update; brew upgrade; brew cleanup; brew cask cleanup; mas upgrade; rustup update"
 
 alias be="bundle exec"
 
