@@ -80,7 +80,7 @@
 	autocorrect = 1
 
 [push]
-	default = tracking
+	default = current
 
 [remote "origin"]
 	push = HEAD
