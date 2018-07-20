@@ -7,7 +7,6 @@ endif
 
 call plug#begin()
 
-Plug 'bling/vim-airline'
 Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
@@ -21,6 +20,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-vinegar'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
@@ -51,7 +52,7 @@ function! SetTheme()
     colorscheme Cubicle
 
     if has('statusline')
-      let g:airline_theme='PaperColor'
+      let g:airline_theme='papercolor'
     end
   endif
 endfunction
