@@ -14,4 +14,7 @@ ruby-install ruby stable
 gem install bundler
 gem install rails
 
+# Install rust
+curl https://sh.rustup.rs -sSf | sh
+
 ./copy-dotfiles.sh

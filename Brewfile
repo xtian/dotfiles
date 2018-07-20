@@ -28,7 +28,6 @@ brew 'mas'
 brew 'node'
 brew 'pt'
 brew 'ruby-install'
-brew 'rust'
 brew 'tmux'
 brew 'tree'
 brew 'wget', args: ['with-iri']
