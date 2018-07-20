@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Install Homebrew
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-
 brew bundle
 
 # Enable key repeat in Sublime
