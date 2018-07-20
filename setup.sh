@@ -3,7 +3,6 @@
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-brew tap Homebrew/bundle
 brew bundle
 
 # Enable key repeat in Sublime
