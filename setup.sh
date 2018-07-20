@@ -11,7 +11,6 @@ defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 # Install ruby
 ruby-install ruby stable
 gem install bundler
-gem install rails
 
 # Install rust
 curl https://sh.rustup.rs -sSf | sh
