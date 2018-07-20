@@ -3,7 +3,6 @@ brew 'coreutils'
 puts 'Don’t forget to add /usr/local/opt/coreutils/libexec/gnubin to $PATH.'
 
 # Install more recent versions of some OS X tools
-tap 'homebrew/dupes'
 brew 'bash'
 brew 'findutils', args: ['with-default-names']
 brew 'gnu-tar', args: ['with-default-names']
@@ -34,7 +33,6 @@ brew 'wget', args: ['with-iri']
 brew 'yarn'
 
 # Install bash completions
-tap 'homebrew/completions'
 brew 'bash-completion'
 brew 'cargo-completion'
 brew 'ruby-completion'
