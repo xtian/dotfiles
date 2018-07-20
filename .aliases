@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Rebase current branch on master
-alias fupm="git co master && git p && git co - && git r master && git push -f"
-
 # List all files
 alias la="ls -aG"
 
@@ -16,9 +13,6 @@ alias ls="command ls -G"
 alias up="brew update; brew upgrade; brew cleanup; brew cask cleanup; mas upgrade; rustup update"
 
 alias be="bundle exec"
-
-# Install npm and bower dependencies
-alias nb="npm install && npm prune; bower install && bower prune"
 
 # Make a quick working commit
 alias workin="git add .; git commit -am workin"
