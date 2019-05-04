@@ -50,5 +50,6 @@ cask 'torbrowser'
 cask 'transmission'
 cask 'vlc'
 
+mas 'Xcode', id: 497799835
 mas 'xScope', id: 447661441
 mas 'The Unarchiver', id: 425424353
