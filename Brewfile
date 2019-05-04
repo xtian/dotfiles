@@ -4,10 +4,6 @@ puts 'Don’t forget to add /usr/local/opt/coreutils/libexec/gnubin to $PATH.'
 
 # Install more recent versions of some OS X tools
 brew 'bash'
-brew 'findutils', args: ['with-default-names']
-brew 'gnu-tar', args: ['with-default-names']
-brew 'gnu-time', args: ['with-default-names']
-brew 'gnu-which', args: ['with-default-names']
 brew 'grep', args: ['with-default-names']
 brew 'gzip'
 brew 'less'
