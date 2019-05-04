@@ -36,6 +36,7 @@ brew 'ruby-completion'
 # Install native apps
 tap 'caskroom/versions'
 cask '1password'
+cask 'alacritty'
 cask 'appcleaner'
 cask 'firefox-developer-edition'
 cask 'flux'
