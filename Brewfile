@@ -1,9 +1,6 @@
-# Install GNU core utilities (those that come with OS X are outdated)
-brew 'coreutils'
-puts 'Don’t forget to add /usr/local/opt/coreutils/libexec/gnubin to $PATH.'
-
 # Install more recent versions of some OS X tools
 brew 'bash'
+brew 'coreutils'
 brew 'grep'
 brew 'gzip'
 brew 'less'
