@@ -4,12 +4,12 @@ puts 'Don’t forget to add /usr/local/opt/coreutils/libexec/gnubin to $PATH.'
 
 # Install more recent versions of some OS X tools
 brew 'bash'
-brew 'grep', args: ['with-default-names']
+brew 'grep'
 brew 'gzip'
 brew 'less'
 brew 'lsof'
 brew 'make'
-brew 'vim', args: ['override-system-vi']
+brew 'vim'
 brew 'whois'
 
 # Install command line utilities
@@ -27,7 +27,7 @@ brew 'ripgrep'
 brew 'ruby-install'
 brew 'tmux'
 brew 'tree'
-brew 'wget', args: ['with-iri']
+brew 'wget'
 brew 'yarn'
 
 # Install bash completions
