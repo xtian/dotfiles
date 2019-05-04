@@ -53,10 +53,3 @@ cask 'vlc'
 
 mas 'xScope', id: 447661441
 mas 'The Unarchiver', id: 425424353
-
-# Install fonts
-tap 'caskroom/fonts'
-cask 'font-hack'
-
-# Install Homebrew Services
-tap 'homebrew/services'
