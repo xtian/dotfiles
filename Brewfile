@@ -13,7 +13,6 @@ brew 'vim'
 brew 'whois'
 
 # Install command line utilities
-brew 'chruby'
 brew 'diff-so-fancy'
 brew 'elixir'
 brew 'fzf'
@@ -24,7 +23,7 @@ brew 'kakoune'
 brew 'mas'
 brew 'node'
 brew 'ripgrep'
-brew 'ruby-install'
+brew 'ruby'
 brew 'tmux'
 brew 'tree'
 brew 'wget'
@@ -33,7 +32,6 @@ brew 'yarn'
 # Install bash completions
 brew 'bash-completion'
 brew 'cargo-completion'
-brew 'ruby-completion'
 
 # Install native apps
 tap 'caskroom/versions'
