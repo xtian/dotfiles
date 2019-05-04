@@ -7,13 +7,12 @@ endif
 
 call plug#begin()
 
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'JazzCore/ctrlp-cmatcher'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 Plug 'noahfrederick/vim-hemisu'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'rust-lang/rust.vim'
@@ -21,17 +20,18 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
+
 call plug#end()
 
 " Color scheme
-set background=dark
-colorscheme Tomorrow-Night-Bright
+set background=light
+let g:gruvbox_contrast_light='hard'
+
+colorscheme gruvbox
 
 if has("autocmd")
   autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
-  autocmd FileType * call SetTheme()
 endif
 
 if has('statusline')
@@ -45,14 +45,3 @@ if has('statusline')
 
   let g:airline#extensions#tabline#enabled=1
 endif
-
-function! SetTheme()
-  if &filetype != "gitcommit" && &filetype != "gitrebase"
-    set background=light
-    colorscheme Cubicle
-
-    if has('statusline')
-      let g:airline_theme='papercolor'
-    end
-  endif
-endfunction

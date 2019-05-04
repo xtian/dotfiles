@@ -62,6 +62,7 @@ set splitright
 set switchbuf=useopen
 " Enable 256 colors
 set t_Co=256
+set termguicolors
 " Show the filename in the window titlebar
 set title
 " Optimize for fast terminal connections
