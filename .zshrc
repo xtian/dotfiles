@@ -35,7 +35,6 @@ alias ls="exa"
 alias la="exa -a"
 alias lla="exa -al"
 alias ps="procs"
-alias sed="sd"
 
 alias be="bundle exec"
 
