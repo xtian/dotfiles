@@ -1,6 +1,0 @@
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-PATH="/usr/local/bin:$PATH"
-PATH="/usr/local/opt/node/bin:$PATH"
-PATH="/usr/local/opt/ruby/bin: $PATH"
-PATH="/Users/xtian/.cargo/bin:$PATH"
-PATH="/Users/xtian/.local/bin:$PATH"

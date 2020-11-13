@@ -1,4 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/zsh
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/node/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin: $PATH"
+export PATH="/Users/xtian/.cargo/bin:$PATH"
+export PATH="/Users/xtian/.local/bin:$PATH"
 
 # Make vim the default editor.
 export EDITOR='vim';

@@ -1,5 +1,4 @@
 # Install more recent versions of some OS X tools
-brew 'bash'
 brew 'coreutils'
 brew 'grep'
 brew 'gzip'
@@ -8,6 +7,7 @@ brew 'lsof'
 brew 'make'
 brew 'vim'
 brew 'whois'
+brew 'zsh'
 
 # Install command line utilities
 brew 'diff-so-fancy'
@@ -25,10 +25,6 @@ brew 'tmux'
 brew 'tree'
 brew 'wget'
 brew 'yarn'
-
-# Install bash completions
-brew 'bash-completion'
-brew 'cargo-completion'
 
 # Install native apps
 tap 'caskroom/versions'
