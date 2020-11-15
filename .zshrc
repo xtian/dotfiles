@@ -1,11 +1,20 @@
 source ~/.config/zsh/zsh-git-prompt/zshrc.sh
 
 #
-# Options
+# Modules
 #
 
-# setopt AUTO_MENU # Show completion menu on successive tab press. needs unsetop menu_complete to work
-# setopt AUTO_NAME_DIRS # Any parameter that is set to the absolute name of a directory immediately becomes a name for that directory
+autoload -Uz compinit; compinit
+_comp_options+=(globdots)
+
+zstyle ':completion:*' matcher-list "m:{a-zA-Z}={A-Za-z}" # ignore case
+zstyle ':completion:*' menu select=2 _complete _ignored _approximate
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+zstyle ':completion:*:functions' ignored-patterns "_*"
+
+#
+# Options
+#
 
 setopt ALWAYS_TO_END          # When completing from the middle of a word, move the cursor to the end of the word
 setopt AUTO_CD                # Go to folder path without using cd
@@ -24,6 +33,7 @@ setopt HIST_IGNORE_SPACE      # Do not record an event starting with a space
 setopt HIST_REDUCE_BLANKS     # Remove extra blanks from each command line being added to history
 setopt HIST_SAVE_NO_DUPS      # Do not write a duplicate event to the history file
 setopt HIST_VERIFY            # Do not execute immediately upon history expansion
+setopt PROMPT_SUBST           # Variable substitution in prompt
 setopt PUSHD_IGNORE_DUPS      # Do not store duplicates in the stack
 setopt SHARE_HISTORY          # Share history between all sessions
 
@@ -37,6 +47,11 @@ alias lla="exa -al"
 alias ps="procs"
 
 alias be="bundle exec"
+
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+alias g='git'
 
 # Get public-facing IP address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -122,11 +137,57 @@ function reload() { exec $SHELL -l }
 # Prompt
 #
 
+VIMODE="I"
+
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 
-PROMPT='%~$(git_super_status) %# '
-RPROMPT='%(?..%F{white}%?%f)'
+PROMPT='%5~$(git_super_status)%# '
+
+readonly RPROMPT_TEMPLATE='%F{white}%(?..%?) ${VIMODE}%f'
+RPROMPT=$RPROMPT_TEMPLATE
+
+#
+# Keybindings
+#
+
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # Like default, but without /
+
+# https://misha.brukman.net/blog/2019/12/uniting-vim-and-emacs-in-zsh/
+
+bindkey -v
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+bindkey "^K" kill-line
+bindkey "^L" clear-screen
+bindkey "^N" down-line-or-search
+bindkey "^P" up-line-or-search
+bindkey "^R" history-incremental-search-backward
+bindkey "^U" kill-whole-line
+bindkey "^W" backward-kill-word
+bindkey "^Y" yank
+
+function zle-line-init() {
+  # Note: this initial mode must match the $VIMODE initial value above.
+  zle -K viins
+}
+
+zle -N zle-line-init
+
+# Show insert/command mode in vi.
+# zle-keymap-select is executed every time KEYMAP changes.
+function zle-keymap-select {
+  VIMODE="${${KEYMAP/vicmd/C}/(main|viins)/I}"
+  RPROMPT=$RPROMPT_TEMPLATE
+  zle reset-prompt
+}
+
+zle -N zle-keymap-select
+
+# 'v' in visual mode opens VIM to edit the command in a full editor.
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 #
 # Miscellaneous
