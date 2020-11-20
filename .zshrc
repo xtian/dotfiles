@@ -188,6 +188,8 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^U" kill-whole-line
 bindkey "^W" backward-kill-word
 bindkey "^Y" yank
+bindkey "^[b" backward-word
+bindkey "^[f" forward-word
 
 function zle-line-init() {
   # Note: this initial mode must match the $VIMODE initial value above.
