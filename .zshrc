@@ -7,10 +7,32 @@ source ~/.config/zsh/zsh-git-prompt/zshrc.sh
 autoload -Uz compinit; compinit
 _comp_options+=(globdots)
 
+# zstyle ':completion:*' squeeze-slashes true
+# zstyle ':completion:*' insert-tab pending
+# zstyle ':completion:*' expand "yes"
 zstyle ':completion:*' matcher-list "m:{a-zA-Z}={A-Za-z}" # ignore case
+# zstyle ':completion:*' list-colors ""
 zstyle ':completion:*' menu select=2 _complete _ignored _approximate
+# zstyle ':completion:*' group-name ''
+# zstyle ':completion:*' verbose yes
+# zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+# zstyle ':completion:*:prefix:*' add-space true
+# zstyle ':completion:*:descriptions' format "|| %{${fg[yellow]}%}%d%{${reset_color}%}"
+# zstyle ':completion:*:messages' format $'\e[00;31m%d'
+# zstyle ':completion:*:manuals' separate-sections true
+# zstyle ':completion:*:manuals.(^1*)' insert-sections true
+# zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
+# zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
+# zstyle ':completion:*:cd:*' ignore-parents parent pwd
+# zstyle ':completion:*:rm:*' ignore-line yes
+# zstyle ':completion:*:*:*:processes' list-colors "=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01"
+# zstyle ':completion:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
+# zstyle ':completion:*:*:*:*:hosts' list-colors "=*=$color[cyan];$color[bg-black]"
 zstyle ':completion:*:functions' ignored-patterns "_*"
+# zstyle ':completion:*:original' list-colors "=*=$color[red];$color[bold]"
+# zstyle ':completion:*:parameters' list-colors "=[^a-zA-Z]*=$color[red]"
+# zstyle ':completion:*:aliases' list-colors "=*=$color[green]"
 
 #
 # Options
