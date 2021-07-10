@@ -57,4 +57,3 @@ mas 'Omnifocus 3', id: 1346203938
 mas 'The Unarchiver', id: 425424353
 mas 'Wipr', id: 1320666476
 mas 'Xcode', id: 497799835
-mas 'xScope', id: 447661441
