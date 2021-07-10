@@ -40,15 +40,11 @@ cask 'discord'
 cask 'firefox-developer-edition'
 cask 'flux'
 cask 'google-chrome-beta'
-cask 'gpg-suite'
+cask 'gpg-suite-no-mail'
 cask 'iterm2'
-cask 'little-snitch'
-cask 'slack'
 cask 'spectacle'
 cask 'spotify'
 cask 'sublime-text'
-cask 'tor-browser'
-cask 'transmission'
 cask 'vlc'
 cask 'xit'
 
@@ -56,4 +52,3 @@ mas 'Affinity Designer', id: 824171161
 mas 'Omnifocus 3', id: 1346203938
 mas 'The Unarchiver', id: 425424353
 mas 'Wipr', id: 1320666476
-mas 'Xcode', id: 497799835
