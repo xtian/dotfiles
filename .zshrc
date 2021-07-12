@@ -7,9 +7,9 @@ source ~/.config/zsh/zsh-git-prompt/zshrc.sh
 autoload -Uz compinit; compinit
 _comp_options+=(globdots)
 
-# zstyle ':completion:*' squeeze-slashes true
-# zstyle ':completion:*' insert-tab pending
-# zstyle ':completion:*' expand "yes"
+zstyle ':completion:*' squeeze-slashes true
+zstyle ':completion:*' insert-tab pending
+zstyle ':completion:*' expand "yes"
 zstyle ':completion:*' matcher-list "m:{a-zA-Z}={A-Za-z}" # ignore case
 # zstyle ':completion:*' list-colors ""
 zstyle ':completion:*' menu select=2 _complete _ignored _approximate
@@ -44,7 +44,7 @@ setopt AUTO_PUSHD             # Push the old directory onto the stack on cd
 setopt CDABLE_VARS            # Change directory to a path stored in a variable
 setopt COMPLETE_IN_WORD       # Allow completion from within a word/phrase
 setopt CORRECT                # Spelling correction for commands
-setopt CORRECTALL             # Spelling correction for arguments
+# setopt CORRECTALL             # Spelling correction for arguments
 setopt EXTENDED_GLOB          # Use extended globbing syntax
 setopt EXTENDED_HISTORY       # Write the history file in the ':start:elapsed;command' format
 setopt HIST_EXPIRE_DUPS_FIRST # Expire a duplicate event first when trimming history
@@ -66,7 +66,6 @@ setopt SHARE_HISTORY          # Share history between all sessions
 alias ls="exa"
 alias la="exa -a"
 alias lla="exa -al"
-alias ps="procs"
 
 alias be="bundle exec"
 
@@ -220,16 +219,16 @@ bindkey -M vicmd v edit-command-line
 dm_val=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
 
 if [[ $dm_val == "Dark" ]]; then
-    if [[ $ITERM_PROFILE == "Default" ]]; then
-        echo -ne "\033]50;SetProfile=Dark\a"
-        export ITERM_PROFILE="Dark"
-    else
-        echo -ne "\033]50;SetProfile=Default\a"
-        export ITERM_PROFILE="Default"
-    fi
+    echo -ne "\033]50;SetProfile=Dark\a"
+    export ITERM_PROFILE="Dark"
+else
+    echo -ne "\033]50;SetProfile=Default\a"
+    export ITERM_PROFILE="Default"
 fi
 
 eval "$(hub alias -s)"
+
+export PATH=/usr/local/opt/ruby/bin:$PATH
 
 ssh-add -A 2> /dev/null
 
