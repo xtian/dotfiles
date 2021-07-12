@@ -1,11 +1,15 @@
 #!/bin/zsh
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/node/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/xtian/.cargo/bin:$PATH"
 export PATH="/Users/xtian/.local/bin:$PATH"
+export PATH="/Users/xtian/Projects/src/zig/build/bin:$PATH"
+export PATH="/Users/xtian/Projects/src/gyro/zig-cache/bin:$PATH"
 
 # Make vim the default editor.
 export EDITOR='vim';
