@@ -229,8 +229,6 @@ fi
 
 eval "$(hub alias -s)"
 
-export PATH=/usr/local/opt/ruby/bin:$PATH
-
 ssh-add -A 2> /dev/null
 
 [[ -e ~/.zshrc.local ]] && source ~/.zshrc.local
