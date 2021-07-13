@@ -66,6 +66,7 @@ setopt SHARE_HISTORY          # Share history between all sessions
 alias ls="exa"
 alias la="exa -a"
 alias lla="exa -al"
+alias tree="exa --tree"
 
 alias be="bundle exec"
 
