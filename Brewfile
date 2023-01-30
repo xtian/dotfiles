@@ -18,7 +18,6 @@ brew 'fd'
 brew 'git-extras'
 brew 'hub'
 brew 'hyperfine'
-brew 'mas'
 brew 'pigz'
 brew 'procs'
 brew 'ripgrep'
@@ -45,8 +44,3 @@ cask 'spotify'
 cask 'sublime-merge'
 cask 'sublime-text'
 cask 'vlc'
-
-mas 'Affinity Designer', id: 824171161
-mas 'Omnifocus 3', id: 1346203938
-mas 'The Unarchiver', id: 425424353
-mas 'Wipr', id: 1320666476
