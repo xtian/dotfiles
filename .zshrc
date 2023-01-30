@@ -1,5 +1,3 @@
-source ~/.config/zsh/zsh-git-prompt/zshrc.sh
-
 #
 # Modules
 #
@@ -157,12 +155,14 @@ function reload() { exec $SHELL -l }
 # Prompt
 #
 
+source ~/.config/zsh/git-prompt.zsh/git-prompt.zsh
+
 VIMODE="I"
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 
-PROMPT='%5~$(git_super_status)%# '
+PROMPT='%5~$(gitprompt)%# '
 
 readonly RPROMPT_TEMPLATE='%F{white}%(?..%?) ${VIMODE}%f'
 RPROMPT=$RPROMPT_TEMPLATE
