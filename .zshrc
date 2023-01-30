@@ -68,8 +68,6 @@ alias la="exa -a"
 alias lla="exa -al"
 alias tree="exa --tree"
 
-alias be="bundle exec"
-
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
