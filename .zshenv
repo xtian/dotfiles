@@ -11,6 +11,9 @@ export PATH="/Users/xtian/.local/bin:$PATH"
 export PATH="/Users/xtian/Projects/src/zig/build/bin:$PATH"
 export PATH="/Users/xtian/Projects/src/gyro/zig-cache/bin:$PATH"
 
+export CPATH="$HOMEBREW_PREFIX/include:$CPATH"
+export LIBRARY_PATH="$HOMEBREW_PREFIX/lib:$LIBRARY_PATH"
+
 # Make vim the default editor.
 export EDITOR='vim';
 
