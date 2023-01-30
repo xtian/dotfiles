@@ -12,7 +12,3 @@ gem install bundler
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ./copy-dotfiles.sh
-
-cp -r \
-  /Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework/Versions/A/Resources/Fonts/SF-Mono-* \
-  /Library/Fonts/
