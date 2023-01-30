@@ -217,16 +217,6 @@ bindkey -M vicmd v edit-command-line
 # Miscellaneous
 #
 
-dm_val=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
-
-if [[ $dm_val == "Dark" ]]; then
-    echo -ne "\033]50;SetProfile=Dark\a"
-    export ITERM_PROFILE="Dark"
-else
-    echo -ne "\033]50;SetProfile=Default\a"
-    export ITERM_PROFILE="Default"
-fi
-
 eval "$(hub alias -s)"
 
 ssh-add -A 2> /dev/null
