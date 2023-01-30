@@ -77,7 +77,7 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 # Get IP address on local network
 alias localip="ipconfig getifaddr en0"
 
-alias up="brew update && brew upgrade; rustup self update; rustup update"
+alias up="brew update && brew upgrade"
 
 # Make a quick working commit
 alias workin="git add . && git commit -am workin"
