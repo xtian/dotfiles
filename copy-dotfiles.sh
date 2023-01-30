@@ -13,7 +13,7 @@ function doIt() {
     --exclude "setup.sh" \
     --exclude "sublime_settings" \
     -avh --no-perms . ~;
-  source ~/.bash_profile;
+  source ~/.zshrc;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
