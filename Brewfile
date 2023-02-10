@@ -1,4 +1,4 @@
-# Install more recent versions of some OS X tools
+# Install more recent versions of some CLI utilities
 brew 'coreutils'
 brew 'git'
 brew 'grep'
