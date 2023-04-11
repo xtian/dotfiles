@@ -215,8 +215,6 @@ bindkey -M vicmd v edit-command-line
 # Miscellaneous
 #
 
-eval "$(hub alias -s)"
-
 ssh-add -A 2> /dev/null
 
 [[ -e ~/.zshrc.local ]] && source ~/.zshrc.local
