@@ -2,17 +2,17 @@
 # Modules
 #
 
-autoload -Uz compinit; compinit
+autoload -Uz compinit && compinit
 _comp_options+=(globdots)
 
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' insert-tab pending
 zstyle ':completion:*' expand "yes"
 zstyle ':completion:*' matcher-list "m:{a-zA-Z}={A-Za-z}" # ignore case
-# zstyle ':completion:*' list-colors ""
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu select=2 _complete _ignored _approximate
-# zstyle ':completion:*' group-name ''
-# zstyle ':completion:*' verbose yes
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' verbose yes
 # zstyle ':completion:*:default' list-prompt '%S%M matches%s'
 # zstyle ':completion:*:prefix:*' add-space true
 # zstyle ':completion:*:descriptions' format "|| %{${fg[yellow]}%}%d%{${reset_color}%}"
