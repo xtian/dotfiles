@@ -218,3 +218,5 @@ bindkey -M vicmd v edit-command-line
 ssh-add -A 2> /dev/null
 
 [[ -e ~/.zshrc.local ]] && source ~/.zshrc.local
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
