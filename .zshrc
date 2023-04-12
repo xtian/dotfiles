@@ -155,7 +155,7 @@ function reload() { exec $SHELL -l }
 # Prompt
 #
 
-source ~/.config/zsh/git-prompt.zsh/git-prompt.zsh
+source "$HOME/.config/zsh/git-prompt.zsh/git-prompt.zsh"
 
 VIMODE="I"
 
@@ -217,6 +217,7 @@ bindkey -M vicmd v edit-command-line
 
 ssh-add -A 2> /dev/null
 
-[[ -e ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -e $HOME/.zshrc.local ]] && source ~/.zshrc.local
+[ -f $HOME/.fzf.zsh ] && source ~/.fzf.zsh
+[[ -e "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
