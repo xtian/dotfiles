@@ -30,6 +30,7 @@ brew 'wget'
 brew 'zopfli'
 
 # Install native apps
+tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 cask '1password'
 cask 'alfred'
