@@ -213,6 +213,7 @@ bindkey -M vicmd v edit-command-line
 
 ssh-add -A 2> /dev/null
 
+source $(fzf-share)/*.zsh
+
 [[ -e $HOME/.zshrc.local ]] && source ~/.zshrc.local
-[ -f $HOME/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -e "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
