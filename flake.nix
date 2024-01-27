@@ -137,7 +137,6 @@
         # Necessary for using flakes on this system.
         experimental-features = "nix-command flakes repl-flake";
         build-users-group = "nixbld";
-        bash-prompt-prefix = "(nix:$name)\040";
         max-jobs = "auto";
         extra-nix-path = "nixpkgs=flake:nixpkgs";
       };
