@@ -10,17 +10,13 @@ call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'elixir-lang/vim-elixir'
 Plug 'JazzCore/ctrlp-cmatcher'
 Plug 'morhetz/gruvbox'
-Plug 'noahfrederick/vim-hemisu'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-ruby/vim-ruby'
 
 call plug#end()
 
