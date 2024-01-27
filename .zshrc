@@ -61,14 +61,24 @@ setopt SHARE_HISTORY          # Share history between all sessions
 # Aliases
 #
 
+alias la="eza --all"
+alias lla="eza --all --git --group-directories-first --header --long --no-user"
+alias ls="eza"
+alias tree="eza --tree"
+
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+alias g="git"
 
 # Get public-facing IP address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Get IP address on local network
 alias localip="ipconfig getifaddr en0"
+
+# Make a quick working commit
+alias wip="git add . && git commit --all --message wip"
 
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
