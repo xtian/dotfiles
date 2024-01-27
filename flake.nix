@@ -83,9 +83,11 @@
 
       environment.shellAliases = {
         g = "git";
+        gc = "nix-collect-garbage -d";
         la = "eza -a";
         lla = "eza -al";
         ls = "eza";
+        sw = "darwin-rebuild switch --flake ~/.config/nix-darwin";
         tree = "eza --tree";
         wip = "git add . && git commit --all --message wip";
       };
