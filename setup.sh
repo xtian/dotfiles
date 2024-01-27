@@ -3,8 +3,7 @@
 curl --proto '=https' --tlsv1.2 -sSf -L \
   https://install.determinate.systems/nix | sh -s -- install
 
-mkdir -p ~/.config/nix-darwin
-cp ./flake.* ~/.config/nix-darwin
+./copy-dotfiles.sh
 
 nix run nix-darwin \
   --extra-experimental-features nix-command \
@@ -13,5 +12,3 @@ nix run nix-darwin \
 
 mkdir -p ~/.config/zsh
 git -C ~/.config/zsh/git-prompt.zsh pull || git clone --depth=1 https://github.com/woefe/git-prompt.zsh ~/.config/zsh/git-prompt.zsh
-
-./copy-dotfiles.sh
