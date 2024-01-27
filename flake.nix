@@ -19,6 +19,7 @@
         bat
         coreutils
         diff-so-fancy
+        dotnet-sdk_8
         elixir
         eza
         fd
@@ -27,6 +28,7 @@
         gh
         git
         git-extras
+        go
         gnugrep
         gnumake
         gnused
@@ -60,6 +62,7 @@
         "airflow"
         "alfred"
         "appcleaner"
+        "corretto"
         "discord"
         "docker"
         "font-sf-mono-for-powerline"
