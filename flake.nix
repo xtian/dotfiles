@@ -16,6 +16,7 @@
     configuration = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         alejandra
+        bat
         coreutils
         diff-so-fancy
         elixir
