@@ -61,26 +61,14 @@ setopt SHARE_HISTORY          # Share history between all sessions
 # Aliases
 #
 
-alias ls="exa"
-alias la="exa -a"
-alias lla="exa -al"
-alias tree="exa --tree"
-
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
-
-alias g='git'
 
 # Get public-facing IP address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Get IP address on local network
 alias localip="ipconfig getifaddr en0"
-
-alias up="brew update && brew upgrade"
-
-# Make a quick working commit
-alias workin="git add . && git commit -am workin"
 
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
@@ -143,6 +131,13 @@ function extract() {
   else
     echo "'$1' is not a valid file!"
   fi
+}
+
+function jwtd() {
+    if [[ -x $(command -v jq) ]]; then
+         jq -R 'split(".") | .[0],.[1] | @base64d | fromjson' <<< "${1}"
+         echo "Signature: $(echo "${1}" | awk -F'.' '{print $3}')"
+    fi
 }
 
 # Create a new directory and enter it
@@ -220,4 +215,3 @@ ssh-add -A 2> /dev/null
 [[ -e $HOME/.zshrc.local ]] && source ~/.zshrc.local
 [ -f $HOME/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -e "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
-
