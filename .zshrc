@@ -181,6 +181,7 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^U" kill-whole-line
 bindkey "^W" backward-kill-word
 bindkey "^Y" yank
+bindkey "^[[Z" reverse-menu-complete
 bindkey "^[b" backward-word
 bindkey "^[f" forward-word
 
