@@ -159,6 +159,10 @@
       modules = [configuration];
     };
 
+    darwinConfigurations."FWM-20513" = nix-darwin.lib.darwinSystem {
+      modules = [configuration];
+    };
+
     # Expose the package set, including overlays, for convenience.
     darwinPackages = self.darwinConfigurations."xtian-mbp".pkgs;
   };
