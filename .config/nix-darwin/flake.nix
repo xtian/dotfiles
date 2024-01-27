@@ -42,6 +42,7 @@
         postgresql
         procs
         ripgrep
+        rsync
         sd
         tealdeer
         tokei
