@@ -8,7 +8,7 @@ _comp_options+=(globdots)
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' insert-tab pending
 zstyle ':completion:*' expand "yes"
-zstyle ':completion:*' matcher-list "m:{a-zA-Z}={A-Za-z}" # ignore case
+zstyle ':completion:*' matcher-list "m:{a-z}={A-Z}"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu select=2 _complete _ignored _approximate
 zstyle ':completion:*' group-name ''
@@ -84,6 +84,8 @@ alias wip="git add . && git commit --all --message wip"
 # For example, to list all directories that contain a certain file:
 # find . -name .gitattributes | map dirname
 alias map="xargs -n1"
+
+alias vic="vi $HOME/.config/nix-darwin/flake.nix"
 
 #
 # Functions
@@ -169,7 +171,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 
 PROMPT='%5~$(gitprompt)%# '
 
-readonly RPROMPT_TEMPLATE='%F{white}%(?..%?) ${VIMODE}%f'
+readonly RPROMPT_TEMPLATE='%F{white} ${IN_NIX_SHELL} %(?..%?) ${VIMODE}%f'
 RPROMPT=$RPROMPT_TEMPLATE
 
 #
@@ -194,6 +196,7 @@ bindkey "^Y" yank
 bindkey "^[[Z" reverse-menu-complete
 bindkey "^[b" backward-word
 bindkey "^[f" forward-word
+bindkey "\e[3~" delete-char
 
 function zle-line-init() {
   # Note: this initial mode must match the $VIMODE initial value above.
