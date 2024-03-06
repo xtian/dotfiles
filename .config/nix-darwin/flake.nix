@@ -18,9 +18,10 @@
         alejandra
         bat
         coreutils
+        devbox
         diff-so-fancy
-        dotnet-sdk_8
-        elixir
+        dotnet-sdk_6
+        elixir_1_16
         eza
         fd
         ffmpeg
@@ -28,10 +29,11 @@
         gh
         git
         git-extras
-        go
         gnugrep
         gnumake
         gnused
+        go
+        golangci-lint
         gzip
         hyperfine
         jq
@@ -44,47 +46,61 @@
         ripgrep
         rsync
         sd
+        tart
         tealdeer
         tokei
         vim
         wget
         whois
+        yarn
         yt-dlp
         zig
       ];
 
-      homebrew.enable = true;
-      homebrew.taps = ["homebrew/cask-fonts" "homebrew/cask-versions"];
-      homebrew.casks = [
-        "1password"
-        "affinity-designer"
-        "affinity-photo"
-        "affinity-publisher"
-        "airflow"
-        "alfred"
-        "appcleaner"
-        "corretto"
-        "discord"
-        "docker"
-        "font-sf-mono-for-powerline"
-        "firefox-developer-edition"
-        "flux"
-        "google-chrome-beta"
-        "gpg-suite-no-mail"
-        "imageoptim"
-        "iterm2"
-        "microsoft-teams"
-        "pgadmin4"
-        "rectangle"
-        "slack"
-        "spotify"
-        "sublime-merge"
-        "sublime-text"
-        "the-unarchiver"
-        "vlc"
-        "zed"
-        "zoom"
-      ];
+      homebrew = {
+        enable = true;
+
+        taps = ["homebrew/cask-fonts" "homebrew/cask-versions"];
+        casks = [
+          "1password"
+          "affinity-designer"
+          "affinity-photo"
+          "affinity-publisher"
+          "airflow"
+          "alfred"
+          "appcleaner"
+          "corretto"
+          "cyberduck"
+          "discord"
+          "docker"
+          "font-sf-mono-for-powerline"
+          "firefox-developer-edition"
+          "flux"
+          "google-chrome-beta"
+          "gpg-suite-no-mail"
+          "imageoptim"
+          "iterm2"
+          "microsoft-teams"
+          "orion"
+          "pgadmin4"
+          "rectangle"
+          "slack"
+          "spotify"
+          "sublime-merge"
+          "sublime-text"
+          "the-unarchiver"
+          "vlc"
+          "zed"
+          "zoom"
+        ];
+
+        masApps = {
+          "1Password for Safari" = 1569813296;
+          "Kagi Search for Safari" = 1622835804;
+          "Microsoft Remote Desktop" = 1295203466;
+          "Wipr" = 1320666476;
+        };
+      };
 
       environment.shellAliases = {
         gc = "nix-collect-garbage -d";
@@ -105,22 +121,39 @@
         LC_ALL = "en_US.UTF-8";
       };
 
-      system.defaults.NSGlobalDomain."com.apple.sound.beep.feedback" = 0;
-      system.defaults.NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = true;
-      system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = false;
-      system.defaults.NSGlobalDomain._HIHideMenuBar = true;
-      system.defaults.SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
-      system.defaults.screencapture.disable-shadow = true;
+      system.defaults = {
+        dock = {
+          autohide = true;
+          show-recents = false;
+          wvous-bl-corner = 2; # Mission Control
+          wvous-tr-corner = 13; # Lock screen
+        };
 
-      system.defaults.dock.autohide = true;
-      system.defaults.dock.wvous-bl-corner = 2; # Mission Control
-      system.defaults.dock.wvous-tr-corner = 13; # Lock screen
+        finder = {
+          AppleShowAllExtensions = true;
+          FXEnableExtensionChangeWarning = false;
+          ShowPathbar = true;
+        };
 
-      system.defaults.NSGlobalDomain."com.apple.mouse.tapBehavior" = 1; # Tap to click
-      system.defaults.trackpad.TrackpadThreeFingerDrag = true;
+        trackpad = {
+          Clicking = true;
+          TrackpadThreeFingerDrag = true;
+        };
 
-      system.keyboard.enableKeyMapping = true;
-      system.keyboard.remapCapsLockToControl = true;
+        NSGlobalDomain."com.apple.sound.beep.feedback" = 0;
+        NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = true;
+        NSGlobalDomain.ApplePressAndHoldEnabled = false;
+        NSGlobalDomain._HIHideMenuBar = true;
+
+        SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
+
+        screencapture.disable-shadow = true;
+      };
+
+      system.keyboard = {
+        enableKeyMapping = true;
+        remapCapsLockToControl = true;
+      };
 
       security.pam.enableSudoTouchIdAuth = true;
 
@@ -148,6 +181,7 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
+      nixpkgs.config.allowUnfree = true;
     };
   in {
     # Build darwin flake using:
