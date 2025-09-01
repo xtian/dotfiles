@@ -40,7 +40,7 @@
     masApps = {
       "1Password for Safari" = 1569813296;
       "Telegram" = 747648890;
-      "Wipr" = 1320666476;
+      "Wipr 2" = 1662217862;
     };
   };
 }
