@@ -14,6 +14,8 @@
     ];
 
     extraConfig = ''
+      set shortmess+=I
+
       set background=light
       colorscheme gruvbox
 
