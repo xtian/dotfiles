@@ -64,6 +64,6 @@
       };
 
       formatter.${system} = treefmtEval.config.build.wrapper;
-      checks.formatting = treefmtEval.config.build.check self;
+      checks.${system}.formatting = treefmtEval.config.build.check self;
     };
 }

@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: macos-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@v19
+      - uses: DeterminateSystems/flake-checker-action@v12
+
+      - name: Test
+        run: nix flake check
