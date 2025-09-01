@@ -4,6 +4,7 @@
     ./ghostty.nix
     ./git.nix
     ./neovim.nix
+    ./readline.nix
     ./zed-editor.nix
     ./extra.nix
   ];
