@@ -55,6 +55,7 @@
       };
       "org.herf.Flux" = {
         lateColorTemp = 1200;
+        nightColorTemp = 2700;
         wakeTime = 480; # 8:00 in minutes
       };
       "com.knollsoft.Rectangle" = {
