@@ -21,6 +21,7 @@
       coreutils
       deno
       gh
+      git-extras
       lsof
       nil
       nixd
