@@ -44,6 +44,11 @@
         DSDontWriteNetworkStores = true;
         DSDontWriteUSBStores = true;
       };
+      "com.apple.screencapture" = {
+        include-date = false;
+        name = "screenshot";
+        type = "PNG";
+      };
       "com.colliderli.iina" = {
         arrowBtnAction = 2;
         playlistAutoPlayNext = 0;
