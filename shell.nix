@@ -9,6 +9,11 @@
       tree = "eza --tree";
     };
 
+    systemPath = [
+      "$GHOSTTY_BIN_DIR"
+      "'/Applications/Sublime Merge.app/Contents/SharedSupport/bin'"
+    ];
+
     variables = {
       EDITOR = "nvim";
     };
