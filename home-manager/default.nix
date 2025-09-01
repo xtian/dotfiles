@@ -15,7 +15,26 @@
     stateVersion = "25.05";
 
     file = {
-      ".hushlogin".text = "";
+      ".hushlogin" = {
+        force = true;
+        text = "";
+      };
+      ".wgetrc" = {
+        force = true;
+        text = ''
+          adjust_extension = on
+          follow_ftp = on
+          no_parent = on
+          retry_connrefused = on
+          robots = off
+          server_response = on
+          timeout = 60
+          timestamping = on
+          tries = 3
+          trust_server_names = on
+          user_agent = Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+        '';
+      };
     };
 
     packages = with pkgs; [
