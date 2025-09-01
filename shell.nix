@@ -1,11 +1,17 @@
 { pkgs, primaryUser, ... }:
 {
-  environment.shells = [ pkgs.fish ];
+  environment = {
+    shells = [ pkgs.fish ];
 
-  environment.shellAliases = {
-    g = "git";
-    sw = "sudo darwin-rebuild switch";
-    tree = "eza --tree";
+    shellAliases = {
+      g = "git";
+      sw = "sudo darwin-rebuild switch";
+      tree = "eza --tree";
+    };
+
+    variables = {
+      EDITOR = "nvim";
+    };
   };
 
   programs._1password.enable = true;
