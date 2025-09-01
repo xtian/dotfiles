@@ -14,7 +14,7 @@
     finder = {
       AppleShowAllExtensions = true;
       FXEnableExtensionChangeWarning = false;
-      FXPreferredViewStyle = "Nlsv";
+      FXPreferredViewStyle = "Nlsv"; # List view
       FXRemoveOldTrashItems = true;
       NewWindowTarget = "Home";
       ShowPathbar = true;
