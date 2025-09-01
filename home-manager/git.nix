@@ -19,6 +19,7 @@
       d = "diff --patch-with-stat";
       dc = "diff --cached --patch-with-stat";
       fp = "push --force-with-lease";
+      l = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       lc = "local-commits";
       pop = "reset HEAD^";
       r = "rebase";
