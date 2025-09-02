@@ -46,12 +46,6 @@
         autocrlf = "input";
         whitespace = "trailing-space,space-before-tab";
       };
-      "credential \"https://github.com\"" = {
-        helper = "!${pkgs.lib.getExe pkgs.gh} auth git-credential";
-      };
-      "credential \"https://gist.github.com\"" = {
-        helper = "!${pkgs.lib.getExe pkgs.gh} auth git-credential";
-      };
       diff = {
         algorithm = "patience";
       };
@@ -71,6 +65,22 @@
     };
 
     ignores = [ ".DS_Store" ];
+
+    includes =
+      let
+        credentialHelperConfig = pkgs.writeTextFile {
+          name = "credential-helper-config";
+          text = ''
+            [credential "https://github.com"]
+              helper =
+              helper = !${pkgs.lib.getExe pkgs.gh} auth git-credential
+            [credential "https://gist.github.com"]
+              helper =
+              helper = !${pkgs.lib.getExe pkgs.gh} auth git-credential;
+          '';
+        };
+      in
+      [ { path = credentialHelperConfig; } ];
 
     userName = "Christian Wesselhoeft";
   };
