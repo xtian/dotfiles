@@ -20,6 +20,7 @@
       "discord"
       "docker"
       "font-sf-mono-for-powerline"
+      "figma"
       "firefox@developer-edition"
       "flux"
       "ghostty"
