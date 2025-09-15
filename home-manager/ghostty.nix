@@ -6,7 +6,7 @@
     settings = {
       font-family = "SF Mono Powerline";
       font-size = 15;
-      theme = "dark:GruvboxDark,light:GruvboxLight";
+      theme = "dark:Gruvbox Dark,light:Gruvbox Light";
       window-height = 58;
       window-width = 120;
     };
