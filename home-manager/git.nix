@@ -42,6 +42,9 @@
       color = {
         ui = "auto";
       };
+      commit = {
+        gpgsign = true;
+      };
       core = {
         autocrlf = "input";
         whitespace = "trailing-space,space-before-tab";
@@ -52,6 +55,12 @@
       fetch = {
         prune = true;
       };
+      gpg = {
+        format = "ssh";
+      };
+      "gpg \"ssh\"" = {
+        program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+      };
       merge = {
         conflictstyle = "diff3";
       };
@@ -61,6 +70,9 @@
       rerere = {
         enabled = true;
         autoupdate = true;
+      };
+      user = {
+        signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDT1aGe2zFzfTwhsZrgmRrcews9wekhMrRLIqRJ14+J3";
       };
     };
 
