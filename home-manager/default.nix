@@ -50,6 +50,7 @@
       wget
       which
       whois
+      yarn-berry
     ];
   };
 
