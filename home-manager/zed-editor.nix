@@ -28,6 +28,13 @@
             "tailwindcss-language-server"
           ];
         };
+
+      };
+
+      lsp = {
+        nil = {
+          settings.nix.flake.autoArchive = true;
+        };
       };
 
       theme = {
