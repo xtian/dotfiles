@@ -8,6 +8,7 @@
       autohide = true;
       show-recents = false;
       wvous-bl-corner = 2; # Mission Control
+      wvous-br-corner = 11; # Apps
       wvous-tr-corner = 13; # Lock screen
     };
 
