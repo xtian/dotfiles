@@ -5,7 +5,11 @@
 
     extensions = [
       "elixir"
+      "fish"
+      "html"
+      "log"
       "nix"
+      "svelte"
     ];
 
     userSettings = {
@@ -16,6 +20,15 @@
       telemetry.metrics = false;
       ui_font_size = 16;
       vim_mode = true;
+
+      languages = {
+        Elixir = {
+          language_servers = [
+            "expert"
+            "tailwindcss-language-server"
+          ];
+        };
+      };
 
       theme = {
         mode = "system";
