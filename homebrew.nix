@@ -13,7 +13,6 @@
       "affinity-photo"
       "affinity-publisher"
       "airflow"
-      "alfred"
       "appcleaner"
       "claude"
       "cyberduck"
