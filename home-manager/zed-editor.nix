@@ -12,6 +12,15 @@
       "svelte"
     ];
 
+    userKeymaps = [
+      {
+        context = "(Editor && mode == full)";
+        bindings = {
+          cmd-e = null;
+        };
+      }
+    ];
+
     userSettings = {
       base_keymap = "SublimeText";
       buffer_font_family = "SF Mono Powerline";
