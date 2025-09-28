@@ -24,7 +24,6 @@
       "flux"
       "ghostty"
       "google-chrome@beta"
-      "gpg-suite-no-mail"
       "iina"
       "imageoptim"
       "obsidian"
