@@ -28,6 +28,7 @@
 
     CustomUserPreferences = {
       NSGlobalDomain = {
+        AppleKeyboardUIMode = 2;
         WebKitDeveloperExtras = true;
       };
       "com.apple.Accessibility" = {
