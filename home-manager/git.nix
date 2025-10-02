@@ -95,5 +95,6 @@
       [ { path = credentialHelperConfig; } ];
 
     userName = "Christian Wesselhoeft";
+    userEmail = "hi@xtian.us";
   };
 }

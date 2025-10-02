@@ -6,7 +6,6 @@
     ./neovim.nix
     ./readline.nix
     ./zed-editor.nix
-    ./extra.nix
   ];
 
   home = {
@@ -46,6 +45,8 @@
       lsof
       nil
       nixd
+      nodejs-slim
+      pnpm
       procs
       wget
       which
