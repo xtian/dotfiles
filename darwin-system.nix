@@ -38,14 +38,6 @@
       "com.apple.AdLib" = {
         allowApplePersonalizedAdvertising = false;
       };
-      # "com.apple.Safari" = {
-      #   IncludeDevelopMenu = 1;
-      #   PrivateBrowsingRequiresAuthentication = 1;
-      #   PrivateSearchEngineUsesNormalSearchEngineToggle = 1;
-      #   SearchProviderShortName = "DuckDuckGo";
-      #   ShowFullURLInSmartSearchField = 1;
-      #   ShowOverlayStatusBar = 1;
-      # };
       "com.apple.desktopservices" = {
         DSDontWriteNetworkStores = true;
         DSDontWriteUSBStores = true;
