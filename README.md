@@ -5,7 +5,8 @@
 1. [Install Homebrew](https://brew.sh)
 2. [Install Determinate Nix](https://docs.determinate.systems/#products)
 3. Set hostname to `xtian-mbp`
-4. Set up Nix Darwin:
+4. Enable Full Disk Access for Terminal in System Settings > Privacy & Security
+5. Set up Nix Darwin:
 
 ```
 sudo mkdir -p /etc/nix-darwin
