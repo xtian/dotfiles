@@ -32,6 +32,9 @@
         AppleMenuBarVisibleInFullscreen = 0;
         WebKitDeveloperExtras = true;
       };
+      NSUserKeyEquivalents = {
+        "Services > Open Safari" = "@e";
+      };
       "com.apple.Accessibility" = {
         FullKeyboardAccessFocusRingEnabled = 1;
       };
