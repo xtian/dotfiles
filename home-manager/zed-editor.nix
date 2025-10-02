@@ -4,6 +4,7 @@
     package = null;
 
     extensions = [
+      "dockerfile"
       "elixir"
       "fish"
       "html"
