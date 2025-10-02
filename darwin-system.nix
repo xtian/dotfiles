@@ -29,6 +29,7 @@
     CustomUserPreferences = {
       NSGlobalDomain = {
         AppleKeyboardUIMode = 2;
+        AppleMenuBarVisibleInFullscreen = 0;
         WebKitDeveloperExtras = true;
       };
       "com.apple.Accessibility" = {
@@ -89,7 +90,7 @@
       "com.apple.sound.beep.feedback" = 0;
       AppleInterfaceStyleSwitchesAutomatically = true;
       ApplePressAndHoldEnabled = false;
-      _HIHideMenuBar = true;
+      _HIHideMenuBar = false;
     };
 
     SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
