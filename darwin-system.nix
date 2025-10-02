@@ -13,7 +13,6 @@
     };
 
     finder = {
-      AppleShowAllExtensions = true;
       FXEnableExtensionChangeWarning = false;
       FXPreferredViewStyle = "Nlsv"; # List view
       FXRemoveOldTrashItems = true;
