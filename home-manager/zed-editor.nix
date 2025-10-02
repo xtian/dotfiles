@@ -7,6 +7,7 @@
       "dockerfile"
       "elixir"
       "fish"
+      "git-firefly"
       "html"
       "log"
       "nix"
