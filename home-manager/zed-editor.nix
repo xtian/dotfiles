@@ -9,6 +9,7 @@
       "html"
       "log"
       "nix"
+      "solidity"
       "svelte"
     ];
 
