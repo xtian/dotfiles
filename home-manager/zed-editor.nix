@@ -29,6 +29,7 @@
       buffer_font_family = "SF Mono Powerline";
       buffer_font_size = 15;
       cursor_blink = false;
+      edit_predictions.mode = "subtle";
       telemetry.metrics = false;
       ui_font_size = 16;
       vim_mode = true;
