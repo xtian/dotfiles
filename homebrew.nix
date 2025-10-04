@@ -25,6 +25,7 @@
       "flux-app"
       "ghostty"
       "google-chrome@beta"
+      "hammerspoon"
       "iina"
       "imageoptim"
       "obsidian"

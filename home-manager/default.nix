@@ -14,6 +14,14 @@
     stateVersion = "25.05";
 
     file = {
+      ".hammerspoon/init.lua" = {
+        force = true;
+        text = ''
+          hs.hotkey.bind({"cmd"}, "E", function()
+            hs.application.launchOrFocusByBundleID("com.apple.Safari")
+          end)
+        '';
+      };
       ".hushlogin" = {
         force = true;
         text = "";
