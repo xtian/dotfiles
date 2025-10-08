@@ -73,6 +73,8 @@
         AutoImport = 1;
         AutoImportDirectory = "/Users/${primaryUser}/Downloads";
         AutoSize = 1;
+        CheckQuit = 0;
+        CheckRemoveDownloading = 1;
         DeleteOriginalTorrent = 1;
         DownloadFolder = "/Users/${primaryUser}/Downloads/Torrents";
         DownloadLocationConstant = 1;
@@ -81,6 +83,7 @@
         RandomPort = 1;
         SmallView = 1;
         UseIncompleteDownloadFolder = 1;
+        WarningDonate = 0;
         WarningLegal = 0;
       };
     };
