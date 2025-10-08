@@ -37,6 +37,9 @@
       "com.apple.AdLib" = {
         allowApplePersonalizedAdvertising = false;
       };
+      "com.apple.Mail" = {
+        ConversationViewSortDescending = 1;
+      };
       "com.apple.Safari" = {
         IncludeDevelopMenu = 1;
         PrivateBrowsingRequiresAuthentication = 1;
