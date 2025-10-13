@@ -5,6 +5,7 @@
 
     shellAliases = {
       g = "git";
+      ls = "eza";
       sw = "sudo darwin-rebuild switch";
       tree = "eza --tree";
     };
