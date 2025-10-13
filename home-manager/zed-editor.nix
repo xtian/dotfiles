@@ -49,6 +49,16 @@
         nil = {
           settings.nix.flake.autoArchive = true;
         };
+
+        vscode-css-language-server = {
+          settings = {
+            css = {
+              lint = {
+                unknownAtRules = "ignore";
+              };
+            };
+          };
+        };
       };
 
       theme = {
