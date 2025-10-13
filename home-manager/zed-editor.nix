@@ -10,6 +10,7 @@
       "git-firefly"
       "html"
       "log"
+      "mermaid"
       "nix"
       "solidity"
       "svelte"
