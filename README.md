@@ -17,4 +17,3 @@ sudo nix run nix-darwin/master#darwin-rebuild -- switch
 ```
 
 5. Enable iCloud Desktop & Documents sync
-6. Set Alfred preferences folder to ~/Documents
