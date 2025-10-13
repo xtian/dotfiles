@@ -45,8 +45,8 @@
     };
 
     packages = with pkgs; [
-      coreutils
       beam28Packages.elixir_1_19
+      coreutils
       deno
       gh
       git-extras
