@@ -67,6 +67,9 @@
       pull = {
         rebase = true;
       };
+      push = {
+        autoSetupRemote = true;
+      };
       rerere = {
         enabled = true;
         autoupdate = true;
