@@ -46,6 +46,7 @@
 
     packages = with pkgs; [
       beam28Packages.elixir_1_19
+      claude-code
       coreutils
       deno
       gh
