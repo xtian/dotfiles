@@ -71,6 +71,11 @@
     jq.enable = true;
     yt-dlp.enable = true;
 
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
+    };
+
     eza = {
       enable = true;
       enableFishIntegration = true;
