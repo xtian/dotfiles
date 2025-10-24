@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3.8.6";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -71,6 +73,7 @@
           ./darwin-system.nix
           ./homebrew.nix
           ./shell.nix
+          inputs.determinate.darwinModules.default
           inputs.home-manager.darwinModules.home-manager
           {
             home-manager.extraSpecialArgs = specialArgs;
