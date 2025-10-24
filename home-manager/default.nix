@@ -49,6 +49,7 @@
       claude-code
       coreutils
       deno
+      fh
       gh
       git-extras
       lsof
