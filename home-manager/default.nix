@@ -54,7 +54,6 @@
       lsof
       nil
       nixd
-      nodejs-slim
       pnpm
       procs
       wget
