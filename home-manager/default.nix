@@ -58,6 +58,7 @@
       nodejs-slim
       pnpm
       procs
+      tokei
       wget
       which
       whois
