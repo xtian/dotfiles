@@ -22,6 +22,7 @@
       buffer_font_size = 15;
       cursor_blink = false;
       edit_predictions.mode = "subtle";
+      tab_size = 2;
       telemetry.metrics = false;
       ui_font_size = 16;
       vim_mode = true;
