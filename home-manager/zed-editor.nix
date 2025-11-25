@@ -29,7 +29,6 @@
       languages = {
         Elixir = {
           language_servers = [
-            "expert"
             "tailwindcss-language-server"
           ];
         };
