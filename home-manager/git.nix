@@ -68,6 +68,9 @@
       push = {
         autoSetupRemote = true;
       };
+      rebase = {
+        updateRefs = true;
+      };
       rerere = {
         enabled = true;
         autoupdate = true;
