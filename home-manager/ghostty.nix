@@ -9,6 +9,8 @@
       theme = "dark:Gruvbox Dark,light:Gruvbox Light";
       window-height = 58;
       window-width = 120;
+
+      keybind = "shift+enter=text:\\n";
     };
   };
 }
