@@ -27,6 +27,9 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
+      # https://github.com/NixOS/nixpkgs/pull/465669
+      set -e DEVELOPER_DIR
+
       set fish_greeting
       fish_config prompt choose informative_vcs
     '';
