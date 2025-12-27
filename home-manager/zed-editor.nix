@@ -17,6 +17,7 @@
     ];
 
     userSettings = {
+      auto_indent = false;
       base_keymap = "SublimeText";
       buffer_font_family = "SF Mono Powerline";
       buffer_font_size = 15;
