@@ -33,12 +33,20 @@
       languages = {
         Elixir = {
           language_servers = [
+            "expert"
             "tailwindcss-language-server"
           ];
         };
       };
 
       lsp = {
+        expert = {
+          binary = {
+            path = "/Users/xtian/Projects/src/expert/apps/expert/_build/prod/rel/plain/bin/start_expert";
+            arguments = [ "--stdio" ];
+          };
+        };
+
         nil = {
           settings.nix.flake.autoArchive = true;
         };
