@@ -1,7 +1,16 @@
 { hostName, primaryUser, ... }:
 {
-  networking.hostName = hostName;
-  networking.computerName = hostName;
+  networking = {
+    inherit hostName;
+    computerName = hostName;
+
+    applicationFirewall = {
+      enable = true;
+      enableStealthMode = true;
+      allowSigned = true;
+      allowSignedApp = true;
+    };
+  };
 
   system.defaults = {
     dock = {
