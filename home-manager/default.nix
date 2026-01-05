@@ -55,7 +55,7 @@
       lsof
       nil
       nixd
-      nodejs-slim
+      nodejs
       pnpm
       procs
       tokei
