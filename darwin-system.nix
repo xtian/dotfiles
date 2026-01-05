@@ -12,6 +12,10 @@
     };
   };
 
+  system.activationScripts.extraActivation.text = ''
+    softwareupdate --install-rosetta --agree-to-license
+  '';
+
   system.defaults = {
     dock = {
       autohide = true;
