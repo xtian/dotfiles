@@ -49,6 +49,7 @@
       claude-code
       coreutils
       deno
+      dos2unix
       fh
       gh
       git-extras
@@ -58,6 +59,7 @@
       nodejs
       pnpm
       procs
+      qmk
       tokei
       wget
       which
