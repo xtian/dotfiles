@@ -14,6 +14,7 @@
       "affinity-photo"
       "affinity-publisher"
       "airflow"
+      "android-studio"
       "appcleaner"
       "claude"
       "cyberduck"
