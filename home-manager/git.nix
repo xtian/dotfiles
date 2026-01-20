@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{ gitUserConfigPath, pkgs, ... }:
+let
+  keys = import ../keys.nix;
+in
 {
   programs.git = {
     enable = true;
@@ -75,11 +78,7 @@
         enabled = true;
         autoupdate = true;
       };
-      user = {
-        email = "hi@xtian.us";
-        name = "Christian Wesselhoeft";
-        signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDT1aGe2zFzfTwhsZrgmRrcews9wekhMrRLIqRJ14+J3";
-      };
+      user.signingkey = keys.user;
     };
 
     ignores = [ ".DS_Store" ];
@@ -95,6 +94,9 @@
             helper = !${pkgs.lib.getExe pkgs.gh} auth git-credential;
         '';
       in
-      [ { path = credentialHelperConfig; } ];
+      [
+        { path = credentialHelperConfig; }
+        { path = gitUserConfigPath; }
+      ];
   };
 }

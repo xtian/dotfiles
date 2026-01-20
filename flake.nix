@@ -16,6 +16,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ragenix.url = "github:yaxitech/ragenix";
+
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +25,7 @@
   };
 
   outputs =
-    inputs@{ self, ... }:
+    inputs@{ ragenix, self, ... }:
     let
       hostName = "xtian-mbp";
       primaryUser = "xtian";
@@ -40,6 +42,7 @@
         inherit
           hostName
           primaryUser
+          ragenix
           self
           system
           ;
@@ -70,18 +73,31 @@
 
         modules = [
           baseConfiguration
+          inputs.determinate.darwinModules.default
+          inputs.home-manager.darwinModules.home-manager
+          inputs.ragenix.darwinModules.default
           ./darwin-system.nix
           ./homebrew.nix
           ./shell.nix
-          inputs.determinate.darwinModules.default
-          inputs.home-manager.darwinModules.home-manager
-          {
-            home-manager.extraSpecialArgs = specialArgs;
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.verbose = true;
-            home-manager.users.${primaryUser} = import ./home-manager;
-          }
+          (
+            { config, ... }:
+            {
+              age.secrets.git-user-config = {
+                file = ./secrets/git-user-config.age;
+                owner = primaryUser;
+              };
+
+              home-manager = {
+                extraSpecialArgs = specialArgs // {
+                  gitUserConfigPath = config.age.secrets.git-user-config.path;
+                };
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                verbose = true;
+                users.${primaryUser} = import ./home-manager;
+              };
+            }
+          )
         ];
       };
 

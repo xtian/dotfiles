@@ -1,4 +1,8 @@
-{ pkgs, primaryUser, ... }:
+{
+  pkgs,
+  primaryUser,
+  ...
+}:
 {
   imports = [
     ./ghostty.nix
