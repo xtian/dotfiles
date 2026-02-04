@@ -7,6 +7,7 @@
   imports = [
     ./ghostty.nix
     ./git.nix
+    ./jj.nix
     ./neovim.nix
     ./readline.nix
     ./zed-editor.nix
