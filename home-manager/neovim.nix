@@ -13,7 +13,7 @@
       vim-airline-themes
     ];
 
-    extraLuaConfig = ''
+    initLua = ''
       vim.opt.shortmess:append("I")
 
       vim.opt.background = "light"
