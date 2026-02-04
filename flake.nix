@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3.8.6";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
 
     home-manager = {
       url = "github:nix-community/home-manager";
