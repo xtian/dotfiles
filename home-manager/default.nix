@@ -51,7 +51,7 @@
 
     packages = with pkgs; [
       beam28Packages.elixir_1_19
-      claude-code
+      claude-code-bun
       coreutils
       deno
       dos2unix

@@ -2,6 +2,11 @@
   description = "xtian system configuration";
 
   inputs = {
+    claude-code = {
+      url = "github:sadjow/claude-code-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
@@ -25,7 +30,12 @@
   };
 
   outputs =
-    inputs@{ ragenix, self, ... }:
+    inputs@{
+      claude-code,
+      ragenix,
+      self,
+      ...
+    }:
     let
       hostName = "xtian-mbp";
       primaryUser = "xtian";
@@ -96,6 +106,8 @@
                 verbose = true;
                 users.${primaryUser} = import ./home-manager;
               };
+
+              nixpkgs.overlays = [ claude-code.overlays.default ];
             }
           )
         ];
