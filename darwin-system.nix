@@ -127,4 +127,18 @@
   };
 
   security.pam.services.sudo_local.touchIdAuth = true;
+
+  launchd.daemons.limit-maxfiles = {
+    serviceConfig = {
+      Label = "limit.maxfiles";
+      ProgramArguments = [
+        "launchctl"
+        "limit"
+        "maxfiles"
+        "524288"
+        "524288"
+      ];
+      RunAtLoad = true;
+    };
+  };
 }
