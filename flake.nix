@@ -102,10 +102,12 @@
                 extraSpecialArgs = specialArgs // {
                   gitUserConfigPath = config.age.secrets.git-user-config.path;
                 };
+
+                backupFileExtension = "backup";
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                verbose = true;
                 users.${primaryUser} = import ./home-manager;
+                verbose = true;
               };
 
               nixpkgs.overlays = [ claude-code.overlays.default ];
