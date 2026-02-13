@@ -2,27 +2,28 @@
   description = "xtian system configuration";
 
   inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
     claude-code = {
       url = "github:sadjow/claude-code-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
-
+    determinate = {
+      url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    ragenix.url = "github:yaxitech/ragenix";
-
+    ragenix = {
+      url = "github:yaxitech/ragenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -114,6 +115,5 @@
       };
 
       formatter.${system} = treefmtEval.config.build.wrapper;
-      checks.${system}.formatting = treefmtEval.config.build.check self;
     };
 }

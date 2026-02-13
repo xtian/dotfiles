@@ -1,7 +1,14 @@
-{
+_: {
   projectRootFile = "flake.nix";
 
-  programs.deadnix.enable = true;
-  programs.nixfmt.enable = true;
-  programs.prettier.enable = true;
+  programs = {
+    actionlint.enable = true;
+    deadnix.enable = true;
+    fish_indent.enable = true;
+    flake-edit.enable = true;
+    nixf-diagnose.enable = true;
+    nixfmt.enable = true;
+    oxfmt.enable = true;
+    statix.enable = true;
+  };
 }
