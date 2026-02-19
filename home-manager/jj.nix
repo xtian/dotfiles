@@ -24,6 +24,7 @@ in
         email = "hi@xtian.us";
       };
 
+      ui.diff-editor = ":builtin";
       ui.diff-formatter = [ "difft" "--color=always" "$left" "$right" ];
 
       signing = {
