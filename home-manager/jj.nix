@@ -19,6 +19,11 @@ in
         s = [ "st" ];
       };
 
+      user = {
+        name = "Christian Wesselhoeft";
+        email = "hi@xtian.us";
+      };
+
       signing = {
         sign-all = true;
         backend = "ssh";

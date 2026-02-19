@@ -91,17 +91,10 @@
           ./homebrew.nix
           ./shell.nix
           (
-            { config, ... }:
+            _:
             {
-              age.secrets.git-user-config = {
-                file = ./secrets/git-user-config.age;
-                owner = primaryUser;
-              };
-
               home-manager = {
-                extraSpecialArgs = specialArgs // {
-                  gitUserConfigPath = config.age.secrets.git-user-config.path;
-                };
+                extraSpecialArgs = specialArgs;
 
                 backupFileExtension = "backup";
                 useGlobalPkgs = true;
