@@ -56,6 +56,7 @@
       claude-code-bun
       coreutils
       deno
+      difftastic
       dos2unix
       fh
       gh

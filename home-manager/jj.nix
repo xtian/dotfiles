@@ -24,6 +24,8 @@ in
         email = "hi@xtian.us";
       };
 
+      ui.diff-formatter = [ "difft" "--color=always" "$left" "$right" ];
+
       signing = {
         sign-all = true;
         backend = "ssh";
