@@ -21,6 +21,30 @@
     };
 
     settings = {
+      hooks = {
+        Stop = [
+          {
+            hooks = [
+              {
+                type = "command";
+                command = "afplay /System/Library/Sounds/Submarine.aiff";
+              }
+            ];
+          }
+        ];
+        Notification = [
+          {
+            matcher = "permission_prompt";
+            hooks = [
+              {
+                type = "command";
+                command = "afplay /System/Library/Sounds/Bottle.aiff";
+              }
+            ];
+          }
+        ];
+      };
+
       permissions = {
         allow = [
           "Bash(bun tsc:*)"
