@@ -69,6 +69,7 @@
           "Bash(nix path-info *)"
           "Bash(nix search *)"
           "Bash(nix show-derivation *)"
+          "Bash(nix-store *)"
           "Bash(npm view:*)"
           "Read(//nix/store/**)"
           "WebFetch(domain:api.github.com)"
