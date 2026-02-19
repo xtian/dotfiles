@@ -73,6 +73,8 @@
           "Bash(npm view:*)"
           "Read(//nix/store/**)"
           "WebFetch(domain:api.github.com)"
+          "WebFetch(domain:gist.github.com)"
+          "WebFetch(domain:github.com)"
           "WebFetch(domain:hex.pm)"
           "WebFetch(domain:hexdocs.pm)"
           "WebFetch(domain:npmjs.com)"
