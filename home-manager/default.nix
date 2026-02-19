@@ -6,6 +6,7 @@
 {
   imports = [
     ./claude-code.nix
+    ./fish.nix
     ./ghostty.nix
     ./git.nix
     ./jj.nix
