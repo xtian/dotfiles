@@ -19,19 +19,29 @@ in
         s = [ "st" ];
       };
 
-      user = {
-        name = "Christian Wesselhoeft";
-        email = "hi@xtian.us";
-      };
+      ui = {
+        diff-editor = ":builtin";
 
-      ui.diff-editor = ":builtin";
-      ui.diff-formatter = [ "difft" "--color=always" "$left" "$right" ];
+        diff-formatter = [
+          "difft"
+          "--color=always"
+          "$left"
+          "$right"
+        ];
+
+        merge-editor = ":builtin";
+      };
 
       signing = {
         sign-all = true;
         backend = "ssh";
         key = keys.user;
         backends.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+      };
+
+      user = {
+        name = "Christian Wesselhoeft";
+        email = "hi@xtian.us";
       };
     };
   };
