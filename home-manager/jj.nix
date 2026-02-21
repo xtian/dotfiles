@@ -4,6 +4,7 @@ in
 {
   programs.jujutsu = {
     enable = true;
+
     settings = {
       aliases = {
         d = [ "desc" ];
