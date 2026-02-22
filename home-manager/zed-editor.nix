@@ -23,6 +23,8 @@
       buffer_font_size = 15;
       cursor_blink = false;
       edit_predictions.mode = "subtle";
+      format_on_save = "on";
+      formatter = "language_server";
       preferred_line_length = 140;
       soft_wrap = "bounded";
       tab_size = 2;
@@ -31,12 +33,10 @@
       vim_mode = true;
 
       languages = {
-        Elixir = {
-          language_servers = [
-            "expert"
-            "tailwindcss-language-server"
-          ];
-        };
+        Elixir.language_servers = [
+          "expert"
+          "tailwindcss-language-server"
+        ];
       };
 
       lsp = {
@@ -52,13 +52,7 @@
         };
 
         vscode-css-language-server = {
-          settings = {
-            css = {
-              lint = {
-                unknownAtRules = "ignore";
-              };
-            };
-          };
+          settings.css.lint.unknownAtRules = "ignore";
         };
       };
 
