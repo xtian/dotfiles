@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.zed-editor = {
     enable = true;
@@ -31,6 +32,10 @@
       telemetry.metrics = false;
       ui_font_size = 16;
       vim_mode = true;
+
+      agent_servers = {
+        claude.env.CLAUDE_CODE_EXECUTABLE = pkgs.lib.getExe pkgs.claude-code-bun;
+      };
 
       languages = {
         Elixir.language_servers = [
