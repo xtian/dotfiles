@@ -16,6 +16,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    opencode = {
+      url = "github:anomalyco/opencode";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,6 +37,7 @@
   outputs =
     inputs@{
       claude-code,
+      opencode,
       ragenix,
       self,
       ...
@@ -90,22 +95,22 @@
           ./darwin-system.nix
           ./homebrew.nix
           ./shell.nix
-          (
-            _:
-            {
-              home-manager = {
-                extraSpecialArgs = specialArgs;
+          (_: {
+            home-manager = {
+              extraSpecialArgs = specialArgs;
 
-                backupFileExtension = "backup";
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.${primaryUser} = import ./home-manager;
-                verbose = true;
-              };
+              backupFileExtension = "backup";
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.${primaryUser} = import ./home-manager;
+              verbose = true;
+            };
 
-              nixpkgs.overlays = [ claude-code.overlays.default ];
-            }
-          )
+            nixpkgs.overlays = [
+              claude-code.overlays.default
+              opencode.overlays.default
+            ];
+          })
         ];
       };
 

@@ -63,6 +63,7 @@
       git-extras
       lsof
       nil
+      opencode
       nixd
       nodejs
       pnpm
