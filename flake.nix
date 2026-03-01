@@ -16,10 +16,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    opencode = {
-      url = "github:anomalyco/opencode";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # opencode = {
+    #   url = "github:anomalyco/opencode";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,7 +37,7 @@
   outputs =
     inputs@{
       claude-code,
-      opencode,
+      # opencode,
       ragenix,
       self,
       ...
@@ -108,7 +108,7 @@
 
             nixpkgs.overlays = [
               claude-code.overlays.default
-              opencode.overlays.default
+              # opencode.overlays.default
             ];
           })
         ];
