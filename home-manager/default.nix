@@ -53,7 +53,7 @@
     };
 
     packages = with pkgs; [
-      beam28Packages.elixir_1_19
+      beam28Packages.elixir_1_20
       claude-code-bun
       coreutils
       deno
