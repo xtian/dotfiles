@@ -11,6 +11,7 @@
     ./git.nix
     ./jj.nix
     ./neovim.nix
+    ./opencode.nix
     ./readline.nix
     ./zed-editor.nix
   ];
