@@ -22,6 +22,7 @@
       base_keymap = "SublimeText";
       buffer_font_family = "SF Mono Powerline";
       buffer_font_size = 15;
+      cli_default_open_behavior = "new_window";
       cursor_blink = false;
       edit_predictions.mode = "subtle";
       format_on_save = "on";
