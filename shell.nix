@@ -26,8 +26,11 @@
 
   programs.fish.enable = true;
 
+  users.knownUsers = [ primaryUser ];
+
   users.users."${primaryUser}" = {
     home = "/Users/${primaryUser}";
     shell = pkgs.fish;
+    uid = 501;
   };
 }
