@@ -49,7 +49,7 @@
       lsp = {
         expert = {
           binary = {
-            path = "/Users/xtian/Projects/src/expert/apps/expert/_build/prod/rel/plain/bin/start_expert";
+            path = pkgs.lib.getExe' pkgs.beam28Packages.expert "start_expert";
             arguments = [ "--stdio" ];
           };
         };

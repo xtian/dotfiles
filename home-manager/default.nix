@@ -54,6 +54,7 @@
 
     packages = with pkgs; [
       beam28Packages.elixir_1_20
+      beam28Packages.expert
       claude-code-bun
       coreutils
       deno
