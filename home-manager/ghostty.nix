@@ -6,11 +6,11 @@
     settings = {
       font-family = "SF Mono Powerline";
       font-size = 15;
+      keybind = "shift+enter=text:\\n";
+      macos-titlebar-style = "transparent";
       theme = "dark:Gruvbox Dark,light:Gruvbox Light";
       window-height = 58;
       window-width = 120;
-
-      keybind = "shift+enter=text:\\n";
     };
   };
 }
