@@ -34,8 +34,8 @@
       vim_mode = true;
 
       agent_servers = {
-        claude.type = "registry";
-        claude.env.CLAUDE_CODE_EXECUTABLE = pkgs.lib.getExe pkgs.claude-code-bun;
+        claude-acp.type = "registry";
+        claude-acp.env.CLAUDE_CODE_EXECUTABLE = pkgs.lib.getExe pkgs.claude-code-bun;
       };
 
       languages = {
