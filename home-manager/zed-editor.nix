@@ -70,6 +70,8 @@
     };
   };
 
+  home.shellAliases.zed = "/Applications/Zed.app/Contents/MacOS/cli";
+
   home.file = {
     ".config/zed/snippets/elixir.json" = {
       force = true;
