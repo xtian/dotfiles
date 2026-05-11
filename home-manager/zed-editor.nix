@@ -36,7 +36,7 @@
 
       agent_servers = {
         claude-acp.type = "registry";
-        claude-acp.env.CLAUDE_CODE_EXECUTABLE = pkgs.lib.getExe pkgs.claude-code-bun;
+        claude-acp.env.CLAUDE_CODE_EXECUTABLE = pkgs.lib.getExe pkgs.claude-code;
       };
 
       languages = {

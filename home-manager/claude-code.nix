@@ -3,11 +3,7 @@
   programs.claude-code = {
     enable = true;
 
-    package = pkgs.symlinkJoin {
-      name = "claude-code-bun";
-      paths = [ pkgs.claude-code-bun ];
-      postBuild = "ln -s $out/bin/claude-bun $out/bin/claude";
-    };
+    package = pkgs.claude-code;
 
     mcpServers = {
       chrome-devtools = {
