@@ -46,6 +46,8 @@
       NSGlobalDomain = {
         AppleKeyboardUIMode = 2;
         AppleMenuBarVisibleInFullscreen = 0;
+        SUAutomaticallyUpdate = 1;
+        SUEnableAutomaticChecks = 1;
         WebKitDeveloperExtras = true;
       };
       "com.apple.Accessibility" = {
