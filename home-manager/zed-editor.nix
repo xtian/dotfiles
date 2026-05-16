@@ -48,7 +48,7 @@
       lsp = {
         expert = {
           binary = {
-            path = pkgs.lib.getExe' pkgs.beam28Packages.expert "start_expert";
+            path = pkgs.lib.getExe' pkgs.beam28Packages.expert "expert";
             arguments = [ "--stdio" ];
           };
         };
