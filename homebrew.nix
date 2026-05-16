@@ -25,6 +25,7 @@
       "firefox@developer-edition"
       "flux-app"
       "ghostty"
+      "gg"
       "google-chrome@beta"
       "hammerspoon"
       "iina"
