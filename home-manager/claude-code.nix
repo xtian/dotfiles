@@ -18,6 +18,7 @@
 
     settings = {
       autoUpdaterStatus = "disabled";
+      defaultMode = "auto";
 
       hooks = {
         Stop = [
