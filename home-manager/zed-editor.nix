@@ -39,6 +39,7 @@
       };
 
       languages = {
+        CSS.formatter = "prettier";
         Elixir.language_servers = [
           "expert"
           "tailwindcss-language-server"
