@@ -1,5 +1,6 @@
 {
   pkgs,
+  gitForgejoCredentialPath,
   primaryUserEmail,
   primaryUserName,
   ...
@@ -105,6 +106,7 @@ in
       in
       [
         { path = credentialHelperConfig; }
+        { path = gitForgejoCredentialPath; }
       ];
   };
 }

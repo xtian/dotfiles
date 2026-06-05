@@ -108,13 +108,20 @@
           ./homebrew.nix
           ./shell.nix
           ({ config, ... }: {
-            age.secrets.rbw-config = {
-              file = ./secrets/rbw-config.age;
-              owner = primaryUser;
+            age.secrets = {
+              git-forgejo-credential = {
+                file = ./secrets/git-forgejo-credential.age;
+                owner = primaryUser;
+              };
+              rbw-config = {
+                file = ./secrets/rbw-config.age;
+                owner = primaryUser;
+              };
             };
 
             home-manager = {
               extraSpecialArgs = specialArgs // {
+                gitForgejoCredentialPath = config.age.secrets.git-forgejo-credential.path;
                 rbwConfigPath = config.age.secrets.rbw-config.path;
               };
 
