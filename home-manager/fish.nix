@@ -7,6 +7,17 @@
 
       set fish_greeting
       fish_config prompt choose informative_vcs
+
+      function _sync_pi_theme --on-event fish_prompt
+        set -l appearance dark
+        if defaults read -g AppleInterfaceStyle &>/dev/null
+          set appearance dark
+        else
+          set appearance light
+        end
+        echo "{\"family\":\"gruvbox\",\"appearance\":\"$appearance\"}" > ~/.pi/agent/pi-theme.json 2>/dev/null
+        functions -e _sync_pi_theme
+      end
     '';
     functions = {
       fish_jj_prompt.body = ''

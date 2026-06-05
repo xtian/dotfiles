@@ -11,12 +11,14 @@
     };
 
     systemPath = [
+      "/opt/homebrew/bin"
       "$GHOSTTY_BIN_DIR"
       "'/Applications/Sublime Merge.app/Contents/SharedSupport/bin'"
     ];
 
     variables = {
       EDITOR = "nvim";
+      PI_THEME = "gruvbox";
       PLUG_EDITOR = "zed://file/__FILE__:__LINE__";
       SSH_AUTH_SOCK = "/Users/${primaryUser}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
     };

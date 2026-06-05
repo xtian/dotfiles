@@ -1,5 +1,4 @@
-_:
-{
+_: {
   programs.opencode = {
     enable = true;
     settings.autoupdate = false;

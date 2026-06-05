@@ -1,4 +1,14 @@
 {
+  lib,
+  primaryUser,
+  ...
+}:
+let
+  brewTrust = builtins.toJSON {
+    trustedtaps = [ "yvgude/lean-ctx" ];
+  };
+in
+{
   homebrew = {
     enable = true;
 
@@ -7,6 +17,14 @@
       cleanup = "zap";
       upgrade = true;
     };
+
+    taps = [
+      "yvgude/lean-ctx"
+    ];
+
+    brews = [
+      "lean-ctx"
+    ];
 
     casks = [
       "1password"
@@ -47,4 +65,13 @@
     #   "Wipr 2" = 1662217862;
     # };
   };
+
+  system.activationScripts.extraActivation.text = lib.mkBefore ''
+    mkdir -p "/Users/${primaryUser}/.homebrew"
+    cat > "/Users/${primaryUser}/.homebrew/trust.json" <<'TRUST'
+    ${brewTrust}
+    TRUST
+    chown "${primaryUser}:staff" "/Users/${primaryUser}/.homebrew/trust.json"
+    chmod 644 "/Users/${primaryUser}/.homebrew/trust.json"
+  '';
 }

@@ -12,6 +12,7 @@
     ./jj.nix
     ./neovim.nix
     ./opencode.nix
+    ./pi-coding-agent.nix
     ./readline.nix
     ./zed-editor.nix
   ];
@@ -67,6 +68,7 @@
       opencode
       nixd
       nodejs
+      pi-coding-agent
       pnpm
       procs
       qmk
