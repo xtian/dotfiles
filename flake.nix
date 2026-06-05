@@ -70,6 +70,8 @@
         # Use Determinate Nix
         nix.enable = false;
 
+        determinateNix.determinateNixd.garbageCollector.strategy = "automatic";
+
         nixpkgs.config.allowUnfree = true;
 
         # The platform the configuration will be used on.
