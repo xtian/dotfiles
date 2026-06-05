@@ -27,6 +27,19 @@
       wvous-bl-corner = 2; # Mission Control
       wvous-br-corner = 11; # Apps
       wvous-tr-corner = 13; # Lock screen
+
+      persistent-apps = [
+        "/System/Applications/Apps.app"
+        "/Applications/Safari.app"
+        "/System/Applications/Messages.app"
+        "/System/Applications/Mail.app"
+        "/System/Applications/Calendar.app"
+        "/Applications/Ghostty.app"
+        "/Applications/Zed.app"
+        "/Applications/Sublime Merge.app"
+        "/Applications/Obsidian.app"
+      ];
+    };
     };
 
     finder = {
