@@ -11,6 +11,7 @@
     determinate = {
       url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nix.inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -27,6 +28,7 @@
     ragenix = {
       url = "github:yaxitech/ragenix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.agenix.inputs.home-manager.follows = "home-manager";
     };
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
