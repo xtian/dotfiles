@@ -97,6 +97,7 @@
           inputs.home-manager.darwinModules.home-manager
           inputs.ragenix.darwinModules.default
           ./darwin-system.nix
+          ./fonts.nix
           ./homebrew.nix
           ./shell.nix
           (_: {
