@@ -40,6 +40,9 @@
         "/Applications/Obsidian.app"
       ];
     };
+
+    loginwindow = {
+      GuestEnabled = false;
     };
 
     finder = {
