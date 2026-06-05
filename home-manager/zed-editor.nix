@@ -1,4 +1,32 @@
 { pkgs, ... }:
+let
+  zed-mix-format = pkgs.writeShellApplication {
+    name = "zed-mix-format";
+    runtimeInputs = [
+      pkgs.beam29Packages.elixir_1_20
+      pkgs.beam29Packages.erlang
+      pkgs.coreutils
+      pkgs.tailwindcss_4
+    ];
+    text = ''
+      # Zed passes the absolute buffer path as $1 and buffer contents on stdin.
+      buffer_path=''${1:?zed-mix-format: missing buffer path}
+
+      dir=$(dirname -- "$buffer_path")
+      while [ "$dir" != "/" ] && [ ! -e "$dir/mix.exs" ]; do
+        dir=$(dirname -- "$dir")
+      done
+
+      # Not inside a mix project: pass stdin through untouched so the save is safe.
+      if [ ! -e "$dir/mix.exs" ]; then
+        exec cat
+      fi
+
+      cd "$dir"
+      exec mix format --stdin-filename "$buffer_path" -
+    '';
+  };
+in
 {
   programs.zed-editor = {
     enable = true;
@@ -40,10 +68,16 @@
 
       languages = {
         CSS.formatter = "prettier";
-        Elixir.language_servers = [
-          "expert"
-          "tailwindcss-language-server"
-        ];
+        Elixir = {
+          formatter.external = {
+            command = pkgs.lib.getExe zed-mix-format;
+            arguments = [ "{buffer_path}" ];
+          };
+          language_servers = [
+            "expert"
+            "tailwindcss-language-server"
+          ];
+        };
       };
 
       lsp = {
