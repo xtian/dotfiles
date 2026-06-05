@@ -14,7 +14,6 @@
     ./jj.nix
     ./neovim.nix
     ./opencode.nix
-    ./pi-coding-agent.nix
     ./readline.nix
     ./zed-editor.nix
   ];
@@ -72,7 +71,7 @@
       kimi-cli.packages.${system}.kimi-cli
       nixd
       nodejs
-      pi-coding-agent
+      oh-my-pi
       pnpm
       procs
       qmk
