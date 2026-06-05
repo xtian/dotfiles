@@ -19,6 +19,11 @@
     settings = {
       autoUpdaterStatus = "disabled";
       defaultMode = "auto";
+      tui = "fullscreen";
+
+      enabledPlugins = {
+        "code-simplifier@claude-plugins-official" = true;
+      };
 
       hooks = {
         Stop = [
