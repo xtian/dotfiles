@@ -70,6 +70,7 @@
       pnpm
       procs
       qmk
+      sequoia-sq
       tokei
       wget
       which
