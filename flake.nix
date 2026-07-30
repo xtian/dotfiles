@@ -74,7 +74,11 @@
         # Use Determinate Nix
         nix.enable = false;
 
-        determinateNix.determinateNixd.garbageCollector.strategy = "automatic";
+        determinateNix.determinateNixd = {
+          builder.cpuCount = 4;
+          builder.memoryBytes = 16 * 1024 * 1024 * 1024;
+          garbageCollector.strategy = "automatic";
+        };
 
         nixpkgs.config.allowUnfree = true;
 
