@@ -17,6 +17,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    kimi-cli = {
+      url = "github:MoonshotAI/kimi-cli";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # opencode = {
     #   url = "github:anomalyco/opencode";
     #   inputs.nixpkgs.follows = "nixpkgs";

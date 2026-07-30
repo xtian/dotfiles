@@ -1,6 +1,8 @@
 {
   pkgs,
   primaryUser,
+  kimi-cli,
+  system,
   ...
 }:
 {
@@ -66,6 +68,7 @@
       lsof
       nil
       opencode
+      kimi-cli.packages.${system}.kimi-cli
       nixd
       nodejs
       pi-coding-agent
