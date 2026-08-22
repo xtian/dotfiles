@@ -34,6 +34,7 @@ in
       "airflow"
       "android-studio"
       "appcleaner"
+      "bitwarden"
       "claude"
       "cyberduck"
       "discord"
