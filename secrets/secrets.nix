@@ -8,4 +8,10 @@ in
       keys.user
     ];
   };
+  "./rbw-config.age" = {
+    publicKeys = [
+      keys.system
+      keys.user
+    ];
+  };
 }

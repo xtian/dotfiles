@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  primaryUserEmail,
+  primaryUserName,
+  ...
+}:
 let
   keys = import ../keys.nix;
 in
@@ -79,8 +84,8 @@ in
         autoupdate = true;
       };
       user = {
-        name = "Christian Wesselhoeft";
-        email = "hi@xtian.us";
+        name = primaryUserName;
+        email = primaryUserEmail;
         signingkey = keys.user;
       };
     };

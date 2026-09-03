@@ -1,7 +1,9 @@
 {
+  config,
   pkgs,
   primaryUser,
   kimi-cli,
+  rbwConfigPath,
   system,
   ...
 }:
@@ -35,6 +37,10 @@
       ".hushlogin" = {
         force = true;
         text = "";
+      };
+      "Library/Application Support/rbw/config.json" = {
+        force = true;
+        source = config.lib.file.mkOutOfStoreSymlink rbwConfigPath;
       };
       ".wgetrc" = {
         force = true;
@@ -73,6 +79,7 @@
       nodejs
       oh-my-pi
       pnpm
+      pinentry_mac
       procs
       qmk
       sequoia-sq
@@ -113,6 +120,8 @@
       enable = true;
       enableFishIntegration = true;
     };
+
+    rbw.enable = true;
 
     ssh = {
       enable = true;

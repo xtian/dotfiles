@@ -46,6 +46,8 @@
     let
       hostName = "xtian-mbp";
       primaryUser = "xtian";
+      primaryUserEmail = "hi@xtian.us";
+      primaryUserName = "Christian Wesselhoeft";
       system = "aarch64-darwin";
 
       pkgs = import inputs.nixpkgs {
@@ -59,6 +61,8 @@
         inherit
           hostName
           primaryUser
+          primaryUserEmail
+          primaryUserName
           ragenix
           self
           system
@@ -103,9 +107,16 @@
           ./fonts.nix
           ./homebrew.nix
           ./shell.nix
-          (_: {
+          ({ config, ... }: {
+            age.secrets.rbw-config = {
+              file = ./secrets/rbw-config.age;
+              owner = primaryUser;
+            };
+
             home-manager = {
-              extraSpecialArgs = specialArgs;
+              extraSpecialArgs = specialArgs // {
+                rbwConfigPath = config.age.secrets.rbw-config.path;
+              };
 
               backupFileExtension = "backup";
               useGlobalPkgs = true;

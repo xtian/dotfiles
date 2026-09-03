@@ -1,3 +1,4 @@
+{ primaryUserEmail, primaryUserName, ... }:
 let
   keys = import ../keys.nix;
 in
@@ -41,8 +42,8 @@ in
       };
 
       user = {
-        name = "Christian Wesselhoeft";
-        email = "hi@xtian.us";
+        name = primaryUserName;
+        email = primaryUserEmail;
       };
     };
   };
