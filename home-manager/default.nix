@@ -56,12 +56,13 @@
     };
 
     packages = with pkgs; [
-      beam28Packages.elixir_1_20
-      beam28Packages.expert
+      beam29Packages.elixir_1_20
+      beam29Packages.expert
       coreutils
       deno
       difftastic
       dos2unix
+      exercism
       fh
       gh
       git-extras
@@ -81,6 +82,12 @@
       which
       whois
       yarn-berry
+
+      (python3.withPackages (
+        python-pkgs: with python-pkgs; [
+          pytest
+        ]
+      ))
     ];
   };
 
