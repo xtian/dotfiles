@@ -32,6 +32,7 @@ _: {
       "iina"
       "imageoptim"
       "obsidian"
+      "palmier-pro"
       "rectangle"
       "sublime-merge"
       "sublime-text"
