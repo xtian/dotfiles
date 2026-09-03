@@ -14,7 +14,7 @@ _: {
       "affinity-photo"
       "affinity-publisher"
       "airflow"
-      # "android-studio"
+      "android-studio"
       "appcleaner"
       "bitwarden"
       "chatgpt"
