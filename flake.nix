@@ -8,6 +8,10 @@
       url = "github:sadjow/claude-code-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    codex = {
+      url = "github:sadjow/codex-cli-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     determinate = {
       url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
       inputs.nixpkgs.follows = "nixpkgs";

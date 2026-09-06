@@ -35,6 +35,7 @@ in
       # "android-studio"
       "appcleaner"
       "bitwarden"
+      "chatgpt"
       "claude"
       "cyberduck"
       "discord"

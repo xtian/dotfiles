@@ -10,6 +10,7 @@
 {
   imports = [
     ./claude-code.nix
+    ./codex.nix
     ./fish.nix
     ./ghostty.nix
     ./git.nix
