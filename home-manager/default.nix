@@ -78,7 +78,7 @@
       kimi-cli.packages.${system}.kimi-cli
       nixd
       nodejs
-      oh-my-pi
+      omp
       pnpm
       pinentry_mac
       procs

@@ -138,14 +138,6 @@
 
             nixpkgs.overlays = [
               claude-code.overlays.default
-
-              # https://github.com/NixOS/nixpkgs/pull/552262
-              (final: _prev: {
-                oh-my-pi = final.callPackage (final.fetchurl {
-                  url = "https://raw.githubusercontent.com/NixOS/nixpkgs/401b4d033ec641009f0deda5a200713b333715aa/pkgs/by-name/oh/oh-my-pi/package.nix";
-                  hash = "sha256-Puo39uO9k9knfdCjsHQbQPgzeWsyzwLK349W5qh9TgI=";
-                }) { };
-              })
             ];
           })
         ];
