@@ -61,11 +61,6 @@ in
       ui_font_size = 16;
       vim_mode = true;
 
-      agent_servers = {
-        claude-acp.type = "registry";
-        claude-acp.env.CLAUDE_CODE_EXECUTABLE = pkgs.lib.getExe pkgs.claude-code;
-      };
-
       languages = {
         CSS.formatter = "prettier";
         Elixir = {
