@@ -16,9 +16,11 @@
     softwareupdate --install-rosetta --agree-to-license
   '';
 
-  system.activationScripts.postActivation.text = ''
-    echo "trusted-users = root @admin ${primaryUser}" > /etc/nix/nix.custom.conf
-  '';
+  determinateNix.customSettings.trusted-users = [
+    "root"
+    "@admin"
+    primaryUser
+  ];
 
   system.defaults = {
     dock = {
