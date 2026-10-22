@@ -78,8 +78,8 @@
         nix.enable = false;
 
         determinateNix.determinateNixd = {
-          builder.cpuCount = 4;
-          builder.memoryBytes = 16 * 1024 * 1024 * 1024;
+          builder.cpuCount = 8;
+          builder.memoryBytes = 20 * 1024 * 1024 * 1024;
           garbageCollector.strategy = "automatic";
         };
 
