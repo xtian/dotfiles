@@ -17,6 +17,7 @@
     };
 
     settings = {
+      autoCompactWindow = 400000;
       autoUpdaterStatus = "disabled";
       defaultMode = "auto";
       tui = "fullscreen";
