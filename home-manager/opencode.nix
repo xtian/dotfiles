@@ -2,6 +2,6 @@ _: {
   programs.opencode = {
     enable = true;
     settings.autoupdate = false;
-    tui.theme = "gruvbox";
+    cli.theme.name = "gruvbox";
   };
 }
