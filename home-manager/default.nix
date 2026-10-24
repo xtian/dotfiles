@@ -83,6 +83,7 @@
       pinentry_mac
       procs
       qmk
+      quint
       sequoia-sq
       tokei
       wget
