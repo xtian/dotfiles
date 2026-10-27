@@ -26,6 +26,49 @@ let
       exec mix format --stdin-filename "$buffer_path" -
     '';
   };
+
+  # The Nix oxfmt resolves `svelte/compiler` from its store path, so expose the projects' installs.
+  # Zed starts language servers in the worktree root.
+  zed-oxfmt = pkgs.writeShellApplication {
+    name = "zed-oxfmt";
+    runtimeInputs = [ pkgs.oxfmt ];
+    text = ''
+      node_path=""
+      for dir in "$PWD/node_modules" "$PWD"/*/node_modules "$PWD"/*/assets/node_modules; do
+        if [ -d "$dir/svelte" ]; then
+          node_path="$node_path''${node_path:+:}$dir"
+        fi
+      done
+
+      NODE_PATH=$node_path exec oxfmt "$@"
+    '';
+  };
+
+  # Type-aware linting needs tsgolint on PATH, which GUI-launched Zed doesn't have
+  zed-oxlint = pkgs.writeShellApplication {
+    name = "zed-oxlint";
+    runtimeInputs = [
+      pkgs.oxlint
+      pkgs.tsgolint
+    ];
+    text = ''
+      exec oxlint "$@"
+    '';
+  };
+
+  oxcFormatter = [
+    { language_server.name = "oxfmt"; }
+  ];
+
+  oxcLanguage = {
+    formatter = oxcFormatter;
+    prettier.allowed = false;
+  };
+
+  # Apply oxlint's safe fixes before formatting, matching `oxlint --fix` + oxfmt in treefmt
+  oxcLintedLanguage = oxcLanguage // {
+    formatter = [ { code_action = "source.fixAll.oxc"; } ] ++ oxcFormatter;
+  };
 in
 {
   programs.zed-editor = {
@@ -41,6 +84,7 @@ in
       "log"
       "mermaid"
       "nix"
+      "oxc"
       "solidity"
       "svelte"
     ];
@@ -62,7 +106,7 @@ in
       vim_mode = true;
 
       languages = {
-        CSS.formatter = "prettier";
+        CSS = oxcLanguage;
         Elixir = {
           formatter.external = {
             command = pkgs.lib.getExe zed-mix-format;
@@ -73,6 +117,18 @@ in
             "tailwindcss-language-server"
           ];
         };
+        Fish.formatter.external = {
+          command = pkgs.lib.getExe' pkgs.fish "fish_indent";
+        };
+        HTML = oxcLanguage;
+        JavaScript = oxcLintedLanguage;
+        JSON = oxcLanguage;
+        JSONC = oxcLanguage;
+        Markdown = oxcLanguage;
+        Svelte = oxcLintedLanguage;
+        TSX = oxcLintedLanguage;
+        TypeScript = oxcLintedLanguage;
+        YAML = oxcLanguage;
       };
 
       lsp = {
@@ -84,7 +140,26 @@ in
         };
 
         nil = {
-          settings.nix.flake.autoArchive = true;
+          settings = {
+            formatting.command = [ (pkgs.lib.getExe pkgs.nixfmt) ];
+            nix.flake.autoArchive = true;
+          };
+        };
+
+        oxfmt.binary = {
+          path = pkgs.lib.getExe zed-oxfmt;
+          arguments = [ "--lsp" ];
+        };
+
+        oxlint = {
+          binary = {
+            path = pkgs.lib.getExe zed-oxlint;
+            arguments = [ "--lsp" ];
+          };
+          initialization_options.settings = {
+            fixKind = "safe_fix";
+            typeAware = true;
+          };
         };
 
         vscode-css-language-server = {
