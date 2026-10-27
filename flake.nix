@@ -111,10 +111,14 @@
           ./fonts.nix
           ./homebrew.nix
           ./shell.nix
-          ({ config, ... }: {
+          ({ config, lib, ... }: {
             age.secrets = {
               git-forgejo-credential = {
                 file = ./secrets/git-forgejo-credential.age;
+                owner = primaryUser;
+              };
+              nix-access-tokens = {
+                file = ./secrets/nix-access-tokens.age;
                 owner = primaryUser;
               };
               rbw-config = {
@@ -122,6 +126,12 @@
                 owner = primaryUser;
               };
             };
+
+            # customSettings only renders `key = value` lines, so append the include directly.
+            # `!include` tolerates the secret not existing before the first activation.
+            environment.etc."nix/nix.custom.conf".text = lib.mkAfter ''
+              !include ${config.age.secrets.nix-access-tokens.path}
+            '';
 
             home-manager = {
               extraSpecialArgs = specialArgs // {

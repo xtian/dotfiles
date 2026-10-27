@@ -1,7 +1,18 @@
-{ pkgs, primaryUser, ... }:
+{
+  pkgs,
+  primaryUser,
+  ragenix,
+  system,
+  ...
+}:
 {
   environment = {
     shells = [ pkgs.fish ];
+
+    systemPackages = [
+      # Decrypts secrets with 1Password SSH keys
+      (ragenix.packages.${system}.default.override { plugins = [ pkgs.age-plugin-1p ]; })
+    ];
 
     shellAliases = {
       g = "git";

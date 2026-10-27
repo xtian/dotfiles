@@ -14,6 +14,12 @@ in
       keys.user
     ];
   };
+  "./nix-access-tokens.age" = {
+    publicKeys = [
+      keys.system
+      keys.user
+    ];
+  };
   "./rbw-config.age" = {
     publicKeys = [
       keys.system
