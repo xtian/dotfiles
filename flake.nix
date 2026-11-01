@@ -108,6 +108,7 @@
           inputs.home-manager.darwinModules.home-manager
           inputs.ragenix.darwinModules.default
           ./darwin-system.nix
+          ./dns.nix
           ./fonts.nix
           ./homebrew.nix
           ./shell.nix
